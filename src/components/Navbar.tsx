@@ -98,9 +98,13 @@ export default function Navbar() {
 
   return (
     <header
+      // Safe area para iOS notch (móvil). En desktop se anula con md:pt-0
+      style={{ ["--sat" as any]: "env(safe-area-inset-top)" }}
       className={
         // transform-gpu + will-change para evitar parpadeos en iOS con blur
         "fixed top-0 inset-x-0 z-50 bg-white/90 md:backdrop-blur border-b border-border transform-gpu [will-change:transform] " +
+        // Respeta notch en móvil
+        "pt-[var(--sat)] md:pt-0 " +
         // En móvil altura fija; shrink solo en desktop
         (scrolled ? "md:py-2 py-3 shadow-sm" : "md:py-4 py-3")
       }
