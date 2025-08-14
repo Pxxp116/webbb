@@ -32,7 +32,7 @@ export default function Navbar() {
       try {
         const headerOffset = getHeaderOffset();
 
-        // 👇 Empuja el contenido EXACTAMENTE la altura del header en móvil (evita solape con el hero)
+        // Empuja el contenido EXACTAMENTE la altura del header en móvil (evita solape con el hero)
         const isMobile = window.matchMedia("(max-width: 767.98px)").matches;
         if (isMobile) {
           document.body.style.paddingTop = `${headerOffset}px`;
@@ -46,7 +46,7 @@ export default function Navbar() {
           .map(s => ({ id: s.id, el: document.getElementById(s.id) as HTMLElement | null }))
           .filter((x): x is { id: string; el: HTMLElement } => !!x.el);
 
-        // 🔒 Mientras el menú móvil está abierto, no activamos "scrolled" (evita cambios de altura en móvil)
+        // Mientras el menú móvil está abierto, no activamos "scrolled" (evita cambios de altura en móvil)
         setScrolled(window.scrollY > 8 && !open);
 
         let current = "hero";
@@ -74,12 +74,11 @@ export default function Navbar() {
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
-      // 🧹 Limpieza del padding cuando el componente se desmonte o cambie de contexto
       if (typeof document !== "undefined") document.body.style.paddingTop = "";
     };
-  }, [open]); // ← clave para que "scrolled" se congele cuando el menú está abierto
+  }, [open]);
 
-  // Cerrar menú al hacer click fuera (deja menuRef por si lo usas más tarde)
+  // Cerrar menú al hacer click fuera
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (!open) return;
@@ -109,16 +108,18 @@ export default function Navbar() {
 
   return (
     <header
-      // Safe area para notch en iOS (móvil). En desktop se anula con md:pt-0
+      // Safe area para notch en iOS (móvil)
       style={{ ["--sat" as any]: "env(safe-area-inset-top)" }}
       className={
+        // Forzamos que en desktop no haya padding superior extra (igual que antes)
         "fixed top-0 inset-x-0 z-50 bg-white/90 md:backdrop-blur border-b border-border transform-gpu [will-change:transform] " +
-        "pt-[var(--sat)] md:pt-0 " +
+        "pt-[var(--sat)] md:!pt-0 lg:!pt-0 " +
         (scrolled ? "md:py-2" : "md:py-4")
       }
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[48px] md:h-auto">
         <a href="#hero" className="flex items-center gap-2">
+          {/* Móvil: fijo; Desktop: comportamiento original */}
           <img
             src={logo}
             alt="Fluxo"
