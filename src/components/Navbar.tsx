@@ -111,10 +111,11 @@ export default function Navbar() {
       // Safe area para notch en iOS (móvil)
       style={{ ["--sat" as any]: "env(safe-area-inset-top)" }}
       className={
-        // Forzamos que en desktop no haya padding superior extra (igual que antes)
         "fixed top-0 inset-x-0 z-50 bg-white/90 md:backdrop-blur border-b border-border transform-gpu [will-change:transform] " +
-        "pt-[var(--sat)] md:!pt-0 lg:!pt-0 " +
-        (scrolled ? "md:py-2" : "md:py-4")
+        // En móvil, respetamos safe area; en desktop lo anulamos
+        "pt-[var(--sat)] md:!pt-0 " +
+        // ⬇️ Desktop EXACTO como antes: py-2/py-4 y shadow solo al hacer scroll
+        (scrolled ? "md:py-2 md:shadow-sm" : "md:py-4")
       }
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[48px] md:h-auto">
