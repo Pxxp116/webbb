@@ -32,7 +32,10 @@ export default function Navbar() {
         const sectionEls = sections
           .map(s => ({ id: s.id, el: document.getElementById(s.id) as HTMLElement | null }))
           .filter((x): x is { id: string; el: HTMLElement } => !!x.el);
-        setScrolled(window.scrollY > 8);
+
+        // 🔑 Móvil estable: no activar 'scrolled' mientras el menú está abierto
+        setScrolled(window.scrollY > 8 && !open);
+
         let current = "hero";
         for (const s of sectionEls) {
           const top = s.el.getBoundingClientRect().top + window.scrollY;
@@ -55,7 +58,7 @@ export default function Navbar() {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
     };
-  }, []);
+  }, [open]); // ← dependemos de 'open' para congelar 'scrolled' con el menú abierto
 
   // Click away to close mobile menu
   useEffect(() => {
@@ -89,7 +92,8 @@ export default function Navbar() {
     <header className={"fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-border " + (scrolled ? "md:py-2 py-3 shadow-sm" : "md:py-4 py-3")}>
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-auto">
         <a href="#hero" className="flex items-center gap-2">
-          <img src={logo} alt="Fluxo" className={"w-auto transition-all " + (scrolled ? "h-10" : "h-12")} />
+          {/* 🔑 Móvil: h-12 fija; Desktop: encoge con scroll */}
+          <img src={logo} alt="Fluxo" className={"w-auto transition-all " + (scrolled ? "md:h-10 h-12" : "md:h-12 h-12")} />
         </a>
 
         <div className="hidden md:flex items-center gap-1">
