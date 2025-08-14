@@ -88,7 +88,7 @@ export default function Navbar() {
 
   return (
     <header className={"fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-b border-border " + (scrolled ? "py-2 shadow-sm" : "py-4")}>
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-auto">
         <a href="#hero" className="flex items-center gap-2">
           <img src={logo} alt="Fluxo" className={"w-auto transition-all " + (scrolled ? "h-10" : "h-12")} />
         </a>
@@ -104,7 +104,10 @@ export default function Navbar() {
         </button>
       </nav>
 
-      <div ref={menuRef} className={"md:hidden origin-top transition-all duration-300 " + (open ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none")}>
+      <div
+  ref={menuRef}
+  className={"md:hidden origin-top overflow-hidden transition-all duration-300 " + (open ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none")}
+>
         <div className="mx-4 mt-2 rounded-2xl border border-border bg-white/95 backdrop-blur shadow-xl overflow-hidden">
           <div className="flex flex-col p-2">
             {sections.map((s) => <NavLink key={s.id} id={s.id} label={s.label} />)}
