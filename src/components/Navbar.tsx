@@ -17,7 +17,7 @@ export default function Navbar() {
   const [active, setActive] = useState<string>("hero");
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Scrollspy + control de "scrolled"
+  // Scrollspy + control de "scrolled" + empuje del body en móvil
   useEffect(() => {
     if (typeof window === "undefined" || typeof document === "undefined") return;
 
@@ -31,6 +31,15 @@ export default function Navbar() {
     const computeActive = () => {
       try {
         const headerOffset = getHeaderOffset();
+
+        // 👇 Empuja el contenido EXACTAMENTE la altura del header en móvil (evita solape con el hero)
+        const isMobile = window.matchMedia("(max-width: 767.98px)").matches;
+        if (isMobile) {
+          document.body.style.paddingTop = `${headerOffset}px`;
+        } else {
+          document.body.style.paddingTop = "";
+        }
+
         const y = window.scrollY + headerOffset + 1;
 
         const sectionEls = sections
@@ -65,10 +74,12 @@ export default function Navbar() {
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onResize);
+      // 🧹 Limpieza del padding cuando el componente se desmonte o cambie de contexto
+      if (typeof document !== "undefined") document.body.style.paddingTop = "";
     };
   }, [open]); // ← clave para que "scrolled" se congele cuando el menú está abierto
 
-  // Cerrar menú al hacer click fuera
+  // Cerrar menú al hacer click fuera (deja menuRef por si lo usas más tarde)
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (!open) return;
@@ -98,34 +109,33 @@ export default function Navbar() {
 
   return (
     <header
-  className={
-    "fixed top-0 inset-x-0 z-50 bg-white/90 md:backdrop-blur border-b border-border transform-gpu [will-change:transform] " +
-    (scrolled ? "md:py-2" : "md:py-4")
-  }
-  style={{
-    paddingTop: "calc(env(safe-area-inset-top, 0px) + 8px)", // margen superior seguro para notch
-    paddingBottom: "8px" // altura controlada en móvil
-  }}
->
-  <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[48px] md:h-auto">
-    <a href="#hero" className="flex items-center gap-2">
-      <img
-        src={logo}
-        alt="Fluxo"
-        className={"w-auto transition-all " + (scrolled ? "md:h-10 h-8" : "md:h-12 h-8")}
-      />
-    </a>
+      // Safe area para notch en iOS (móvil). En desktop se anula con md:pt-0
+      style={{ ["--sat" as any]: "env(safe-area-inset-top)" }}
+      className={
+        "fixed top-0 inset-x-0 z-50 bg-white/90 md:backdrop-blur border-b border-border transform-gpu [will-change:transform] " +
+        "pt-[var(--sat)] md:pt-0 " +
+        (scrolled ? "md:py-2" : "md:py-4")
+      }
+    >
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[48px] md:h-auto">
+        <a href="#hero" className="flex items-center gap-2">
+          <img
+            src={logo}
+            alt="Fluxo"
+            className={"w-auto transition-all " + (scrolled ? "md:h-10 h-8" : "md:h-12 h-8")}
+          />
+        </a>
 
-    <div className="hidden md:flex items-center gap-1">
-      {sections.map((s) => <NavLink key={s.id} id={s.id} label={s.label} />)}
-      <a href="https://fluxodemo.carrd.co" target="_blank" rel="noopener noreferrer" className="ml-4 btn-outline rounded-full px-5 py-2">Probar demo</a>
-      <a href="https://wa.me/message/YC7W3UVLEHFKB1" target="_blank" rel="noopener noreferrer" className="btn-primary rounded-full px-5 py-2">Contactar</a>
-    </div>
+        <div className="hidden md:flex items-center gap-1">
+          {sections.map((s) => <NavLink key={s.id} id={s.id} label={s.label} />)}
+          <a href="https://fluxodemo.carrd.co" target="_blank" rel="noopener noreferrer" className="ml-4 btn-outline rounded-full px-5 py-2">Probar demo</a>
+          <a href="https://wa.me/message/YC7W3UVLEHFKB1" target="_blank" rel="noopener noreferrer" className="btn-primary rounded-full px-5 py-2">Contactar</a>
+        </div>
 
-    <button onClick={() => setOpen(v => !v)} className="md:hidden p-2 rounded-xl border border-border">
-      {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-    </button>
-  </nav>
-</header>
+        <button onClick={() => setOpen(v => !v)} className="md:hidden p-2 rounded-xl border border-border">
+          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+      </nav>
+    </header>
   );
 }
