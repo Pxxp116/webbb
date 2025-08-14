@@ -98,56 +98,34 @@ export default function Navbar() {
 
   return (
     <header
-      // Safe area para iOS notch (móvil). En desktop se anula con md:pt-0
-      style={{ ["--sat" as any]: "env(safe-area-inset-top)" }}
-      className={
-        // transform-gpu + will-change para evitar parpadeos en iOS con blur
-        "fixed top-0 inset-x-0 z-50 bg-white/90 md:backdrop-blur border-b border-border transform-gpu [will-change:transform] " +
-        // Respeta notch en móvil
-        "pt-[var(--sat)] md:pt-0 " +
-        // En móvil altura fija; shrink solo en desktop
-        (scrolled ? "md:py-2 py-3 shadow-sm" : "md:py-4 py-3")
-      }
-    >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 md:h-auto">
-        <a href="#hero" className="flex items-center gap-2">
-          {/* Móvil: fijo h-12; Desktop: encoge con scroll */}
-          <img
-            src={logo}
-            alt="Fluxo"
-            className={"w-auto transition-all " + (scrolled ? "md:h-10 h-12" : "md:h-12 h-12")}
-          />
-        </a>
+  className={
+    "fixed top-0 inset-x-0 z-50 bg-white/90 md:backdrop-blur border-b border-border transform-gpu [will-change:transform] " +
+    (scrolled ? "md:py-2" : "md:py-4")
+  }
+  style={{
+    paddingTop: "calc(env(safe-area-inset-top, 0px) + 8px)", // margen superior seguro para notch
+    paddingBottom: "8px" // altura controlada en móvil
+  }}
+>
+  <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[48px] md:h-auto">
+    <a href="#hero" className="flex items-center gap-2">
+      <img
+        src={logo}
+        alt="Fluxo"
+        className={"w-auto transition-all " + (scrolled ? "md:h-10 h-8" : "md:h-12 h-8")}
+      />
+    </a>
 
-        <div className="hidden md:flex items-center gap-1">
-          {sections.map((s) => <NavLink key={s.id} id={s.id} label={s.label} />)}
-          <a href="https://fluxodemo.carrd.co" target="_blank" rel="noopener noreferrer" className="ml-4 btn-outline rounded-full px-5 py-2">Probar demo</a>
-          <a href="https://wa.me/message/YC7W3UVLEHFKB1" target="_blank" rel="noopener noreferrer" className="btn-primary rounded-full px-5 py-2">Contactar</a>
-        </div>
+    <div className="hidden md:flex items-center gap-1">
+      {sections.map((s) => <NavLink key={s.id} id={s.id} label={s.label} />)}
+      <a href="https://fluxodemo.carrd.co" target="_blank" rel="noopener noreferrer" className="ml-4 btn-outline rounded-full px-5 py-2">Probar demo</a>
+      <a href="https://wa.me/message/YC7W3UVLEHFKB1" target="_blank" rel="noopener noreferrer" className="btn-primary rounded-full px-5 py-2">Contactar</a>
+    </div>
 
-        <button onClick={() => setOpen(v => !v)} className="md:hidden p-2 rounded-xl border border-border">
-          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </nav>
-
-      <div
-        ref={menuRef}
-        className={
-          // Móvil: animación limpia (iOS) y sin desbordes
-          "md:hidden origin-top overflow-hidden transform-gpu transition-all duration-300 " +
-          (open ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none")
-        }
-      >
-        <div className="mx-4 mt-2 rounded-2xl border border-border bg-white/95 md:backdrop-blur shadow-xl overflow-hidden">
-          <div className="flex flex-col p-2">
-            {sections.map((s) => <NavLink key={s.id} id={s.id} label={s.label} />)}
-            <div className="flex gap-2 p-2">
-              <a href="https://fluxodemo.carrd.co" target="_blank" rel="noopener noreferrer" className="btn-outline flex-1 text-center rounded-full">Probar demo</a>
-              <a href="https://wa.me/message/YC7W3UVLEHFKB1" target="_blank" rel="noopener noreferrer" className="btn-primary flex-1 text-center rounded-full">Contactar</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <button onClick={() => setOpen(v => !v)} className="md:hidden p-2 rounded-xl border border-border">
+      {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+    </button>
+  </nav>
+</header>
   );
 }
