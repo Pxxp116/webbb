@@ -36,12 +36,12 @@ const PlansSection = () => {
             <h3 className="text-[36px] leading-tight font-extrabold text-[#0b2545]">Professional</h3>
 
             <div className="flex items-end gap-2 mt-3">
-              <div className="text-[56px] font-extrabold leading-none text-[#ff7a00]">€39</div>
+              <div className="text-[56px] font-extrabold leading-none text-[#ff7a00]">€79</div>
               <div className="text-[#6b7a90] mb-1 text-lg">/mes</div>
             </div>
 
             <div className="text-sm text-[#6b7a90] mt-1">
-              Pago inicial/activación de <span className="font-medium">€140</span> (IVA incluido)
+              Pago inicial/activación de <span className="font-medium">€199</span> (IVA incluido)
             </div>
 
             <p className="text-[#0b2545cc] mt-6 leading-7 max-w-prose">
