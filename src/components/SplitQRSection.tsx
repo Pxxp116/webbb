@@ -47,10 +47,12 @@ const SplitQRSection = () => {
 
           <div className="mt-8">
             <a 
-              href="mailto:info@fluxoservices.com?subject=Interés en SplitQR&body=Hola, me interesa conocer más sobre SplitQR para mi negocio."
+              href="https://wa.me/message/YC7W3UVLEHFKB1"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-flex items-center gap-2"
             >
-              Próximamente disponible
+              ¡Ya disponible!
               <QrCode className="w-5 h-5" />
             </a>
           </div>
