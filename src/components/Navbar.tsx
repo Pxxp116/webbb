@@ -6,6 +6,7 @@ const sections = [
   { id: "hero", label: "Inicio" },
   { id: "solutions", label: "Soluciones" },
   { id: "automation", label: "Automatización" },
+  { id: "splitqr", label: "SplitQR" },
   { id: "benefits", label: "Beneficios" },
   { id: "plans", label: "Planes" },
   { id: "faq", label: "FAQ" },
