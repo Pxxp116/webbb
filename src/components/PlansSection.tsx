@@ -6,6 +6,7 @@ const PlansSection = () => {
     { icon: MessageCircle, title: "Chatbot de WhatsApp", desc: "Asistente virtual completo para atención al cliente" },
     { icon: PhoneCall, title: "Asistente de Voz", desc: "Respuestas automáticas por llamada telefónica" },
     { icon: LayoutDashboard, title: "Panel de Control", desc: "Dashboard integral para gestionar tu negocio" },
+    { icon: QrCode, title: "SplitQR", desc: "División automática de cuentas mediante código QR" },
   ];
 
   const includes = [
@@ -13,6 +14,7 @@ const PlansSection = () => {
     "Integración con WhatsApp Business",
     "Respuestas automáticas inteligentes",
     "Gestión de reservas y citas",
+    "SplitQR para dividir cuentas",
     "Análisis y reportes",
     "Soporte técnico incluido",
     "Actualizaciones mensuales",
@@ -22,8 +24,7 @@ const PlansSection = () => {
   return (
     <section id="plans" className="section-container py-24">
       <div className="max-w-6xl mx-auto">
-        {/* Plan Principal */}
-        <div className="relative grid lg:grid-cols-2 gap-10 bg-white rounded-[26px] border border-[#e6ebf1] shadow-sm overflow-visible p-6 md:p-8 mb-12">
+        <div className="relative grid lg:grid-cols-2 gap-10 bg-white rounded-[26px] border border-[#e6ebf1] shadow-sm overflow-visible p-6 md:p-8">
           {/* Badge Plan Recomendado */}
           <div className="hidden md:block absolute -top-3 right-10">
             <div className="bg-[#ff7a00] text-white text-sm font-semibold px-4 py-1 rounded-b-lg shadow-[0_6px_0_rgba(0,0,0,0.06)]">
@@ -93,48 +94,6 @@ const PlansSection = () => {
                 </span>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* SplitQR - Próximamente */}
-        <div className="bg-gradient-to-br from-[#f8fafc] to-[#f1f5f9] rounded-[26px] border border-[#e6ebf1] shadow-sm p-6 md:p-8 text-center">
-          <div className="max-w-2xl mx-auto">
-            <div className="w-16 h-16 bg-gradient-to-br from-[#ff7a00] to-[#e96f00] rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <QrCode className="w-8 h-8 text-white" />
-            </div>
-            
-            <h3 className="text-[32px] leading-tight font-extrabold text-[#0b2545] mb-4">SplitQR</h3>
-            <p className="text-[#6b7a90] text-lg mb-6 leading-relaxed">
-              La herramienta definitiva para dividir cuentas sin complicaciones. Tus clientes escanean un QR, 
-              seleccionan sus productos y pagan su parte al instante.
-            </p>
-            
-            <div className="inline-block bg-[#fff4e6] border border-[#ffd2b1] rounded-xl px-4 py-2 mb-6">
-              <span className="text-sm font-semibold text-[#ff7a00]">🚀 Próximamente disponible</span>
-            </div>
-            
-            <div className="space-y-3 text-left max-w-md mx-auto mb-8">
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#ff7a00]" />
-                <span className="text-[#0b2545]">División automática de cuentas</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#ff7a00]" />
-                <span className="text-[#0b2545]">Pagos instantáneos por QR</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#ff7a00]" />
-                <span className="text-[#0b2545]">Integración perfecta con tu TPV</span>
-              </div>
-            </div>
-            
-            <a 
-              href="mailto:info@fluxoservices.com?subject=Interés en SplitQR - Lista de espera&body=Hola,%0D%0A%0D%0AMe interesa conocer más sobre SplitQR y formar parte de la lista de espera para cuando esté disponible.%0D%0A%0D%0ANombre del negocio:%0D%0ATipo de negocio:%0D%0ATeléfono de contacto:%0D%0A%0D%0AGracias."
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#ff7a00] hover:bg-[#e96f00] text-white font-semibold shadow-sm transition-colors"
-            >
-              Únete a la lista de espera
-              <QrCode className="w-5 h-5" />
-            </a>
           </div>
         </div>
       </div>
