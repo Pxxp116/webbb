@@ -36,7 +36,7 @@ const HeroSection = () => {
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4 text-center">
-                WhatsApp Business
+                Chatbot propio
               </h3>
               <p className="text-muted-foreground text-center">
                 Chatbots inteligentes que atienden a tus clientes 24/7, automatizan reservas y gestionan consultas al instante.
