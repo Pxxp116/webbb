@@ -7,6 +7,8 @@ import BenefitsSection from "./components/BenefitsSection";
 import PlansSection from "./components/PlansSection";
 import FAQSection from "./components/FAQSection";
 import Footer from "./components/Footer";
+import ProductsSection from "./components/ProductsSection";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <PlansSection />
       <FAQSection />
       <Footer />
+      <ProductsSection />
     </div>
   );
 }
