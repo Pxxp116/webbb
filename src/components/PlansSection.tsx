@@ -3,15 +3,14 @@ import PlanCheckoutDialog from "./PlanCheckoutDialog";
 
 const PlansSection = () => {
   const featuresLeft = [
-    { icon: MessageCircle, title: "Chatbot de WhatsApp", desc: "Asistente virtual completo para atención al cliente" },
-    { icon: PhoneCall, title: "Asistente de Voz", desc: "Respuestas automáticas por llamada telefónica" },
+    { icon: MessageCircle, title: "Chatbot con Dashboard", desc: "Asistente virtual completo con panel de control para atención al cliente" },
     { icon: LayoutDashboard, title: "Panel de Control", desc: "Dashboard integral para gestionar tu negocio" },
     { icon: QrCode, title: "SplitQR", desc: "División automática de cuentas mediante código QR" },
   ];
 
   const includes = [
     "Configuración personalizada",
-    "Integración con WhatsApp Business",
+    "Integración con Chatbot",
     "Respuestas automáticas inteligentes",
     "Gestión de reservas y citas",
     "SplitQR para dividir cuentas",
