@@ -1,14 +1,13 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
-import Hero from "./components/sections/Hero";
-import Productos from "./components/sections/Productos";
-import Soluciones from "./components/sections/Soluciones";
-import Automatizacion from "./components/sections/Automatizacion";
-import Beneficios from "./components/sections/Beneficios";
-import Planes from "./components/sections/Planes";
-import FAQ from "./components/sections/FAQ";
-import Contacto from "./components/sections/Contacto";
+import Navbar from "./components/ui/Navbar";
+import Footer from "./components/Footer";
+import Hero from "./components/HeroSection";
+import Productos from "./components/ProductsSection";
+import Soluciones from "./components/AutomationSection";
+import Automatizacion from "./components/AutomationSection";
+import Beneficios from "./components/BenefitsSection";
+import Planes from "./components/PlansSection";
+import FAQ from "./components/FAQSection";
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
             <Hero />
           </section>
 
-          {/* 👇 MOVEMOS ESTA SECCIÓN AQUÍ */}
+          {/* 👇 Sección Productos movida justo debajo del Hero */}
           <section id="productos">
             <Productos />
           </section>
@@ -44,10 +43,6 @@ function App() {
           <section id="faq">
             <FAQ />
           </section>
-
-          <section id="contacto">
-            <Contacto />
-          </section>
         </main>
         <Footer />
       </div>
@@ -56,4 +51,3 @@ function App() {
 }
 
 export default App;
-
