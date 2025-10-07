@@ -7,19 +7,25 @@ const AutomationSection = () => {
         Automatiza tareas repetitivas
       </h2>
       <p className="text-lg text-gray-600 max-w-2xl mb-10">
-        Deja que la inteligencia artificial se encargue de responder mensajes, gestionar reservas o procesar pagos, mientras tú te enfocas en hacer crecer tu negocio.
+        Deja que la inteligencia artificial se encargue de responder mensajes,
+        gestionar reservas o procesar pagos, mientras tú te enfocas en hacer
+        crecer tu negocio.
       </p>
 
+      {/* 🎥 Video principal */}
       <div className="w-full max-w-3xl rounded-2xl shadow-lg overflow-hidden">
         <video
-          src="/videos/FluxoAD.mp4"
+          className="w-full h-auto rounded-2xl"
           controls
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-auto rounded-2xl"
-        />
+        >
+          {/* ⚠️ Ruta corregida */}
+          <source src="/assets/FluxoAD.mp4" type="video/mp4" />
+          Tu navegador no soporta la reproducción de video.
+        </video>
       </div>
     </section>
   );
