@@ -1,58 +1,43 @@
-import { ArrowRight, Bot, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative bg-gradient-subtle min-h-screen flex items-center overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="absolute top-20 right-20 w-72 h-72 bg-accent-orange/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-      
-      <div className="section-container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-hero text-primary mb-6">
-              Automatizar y optimizar tareas repetitivas implementando sistemas en negocios.
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0">
-              En Fluxo Services construimos sistemas que eliminan el trabajo manual, 
-              mejoran la experiencia del cliente y conectan tus operaciones en tiempo real.
-            </p>
+    <section id="hero" className="relative overflow-hidden">
+      <div className="container mx-auto px-6 py-32 md:py-40 flex flex-col md:flex-row items-center justify-between">
+        {/* Texto principal */}
+        <div className="flex-1 text-center md:text-left">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Automatización inteligente <br /> para negocios.
+          </h1>
+          <p className="text-lg text-gray-600 mb-10 max-w-xl">
+            Fluxo. Tu negocio, sin pausas. <br />
+            Diseñamos, desarrollamos e implementamos herramientas de
+            automatización que te ayudarán a trabajar de forma más inteligente.
+          </p>
 
-            <div className="flex items-center gap-4 justify-center lg:justify-start">
-              <a href="#productos" className="btn-primary rounded-full px-6 py-3 inline-flex items-center gap-2">
-                Ver Productos <ArrowRight className="w-5 h-5" />
-              </a>
-              <a href="#plans" className="btn-outline rounded-full px-6 py-3">
-                Planes
-              </a>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a
+              href="#contacto"
+              className="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors inline-flex items-center justify-center gap-2"
+            >
+              Contactar <ArrowRight className="w-5 h-5" />
+            </a>
+            <a
+              href="#demo"
+              className="border border-gray-300 px-6 py-3 rounded-full font-semibold text-gray-800 hover:bg-gray-100 transition-colors"
+            >
+              Probar Demo
+            </a>
           </div>
+        </div>
 
-          {/* Side cards (mantiene estética, quitar WhatsApp Business) */}
-          <div className="grid sm:grid-cols-2 gap-6 max-w-md mx-auto lg:mx-0">
-            <div className="card-feature p-6">
-              <div className="icon-circle mb-4">
-                <Bot className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">GastroBot</h3>
-              <p className="text-muted-foreground text-center">
-                Un chatbot único por restaurante, totalmente editable desde su Dashboard, 
-                que actualiza reservas y pedidos en tiempo real.
-              </p>
-            </div>
-            <div className="card-feature p-6">
-              <div className="icon-circle mb-4">
-                <MessageCircle className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Split QR</h3>
-              <p className="text-muted-foreground text-center">
-                Pagos ágiles por mesa: cada comensal paga lo suyo o se divide la cuenta. 
-                Compatible con tarjeta y efectivo.
-              </p>
-            </div>
-          </div>
+        {/* Imagen lateral (mantén tu imagen original) */}
+        <div className="flex-1 flex justify-center mt-16 md:mt-0">
+          <img
+            src="/images/hero-illustration.png"
+            alt="Automatización Inteligente"
+            className="max-w-md w-full h-auto"
+          />
         </div>
       </div>
     </section>

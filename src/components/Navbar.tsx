@@ -4,14 +4,15 @@ import { Menu, X } from "lucide-react";
 
 const sections = [
   { id: "hero", label: "Inicio" },
-  { id: "productos", label: "Productos" }, // ⬅️ NUEVO
+  { id: "productos", label: "Productos" },
   { id: "solutions", label: "Soluciones" },
   { id: "automation", label: "Automatización" },
-  { id: "splitqr", label: "SplitQR" },
   { id: "benefits", label: "Beneficios" },
   { id: "plans", label: "Planes" },
   { id: "faq", label: "FAQ" },
+  { id: "contacto", label: "Contacto" },
 ];
+
 
 
 export default function Navbar() {
