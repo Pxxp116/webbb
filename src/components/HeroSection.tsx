@@ -1,50 +1,20 @@
-import { ArrowRight, Bot, MessageCircle } from "lucide-react";
+import React from "react";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative bg-gradient-subtle min-h-screen flex items-center overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="absolute top-20 right-20 w-72 h-72 bg-accent-orange/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-      
-      <div className="section-container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-hero text-primary mb-6">Automatización inteligente para negocios.</h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium">
-              Fluxo. Tu negocio, sin pausas.
-            </p>
-            <p className="text-lg text-muted-foreground mb-12 max-w-xl">
-              Diseñamos, desarrollamos e implementamos herramientas de automatización que te ayudarán a trabajar de forma más inteligente.
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="https://wa.me/message/YC7W3UVLEHFKB1" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex items-center gap-2">Contactar<ArrowRight className="w-5 h-5" /></a>
-              <a href="https://fluxodemo.carrd.co" target="_blank" rel="noopener noreferrer" className="btn-outline inline-flex items-center gap-2">Probar Demo<Bot className="w-5 h-5" /></a>
-            </div>
-          </div>
-          
-          {/* Visual */}
-          <div className="relative">
-            <div className="card-elevated bg-gradient-to-br from-white to-primary-light p-12 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-              <div className="flex items-center justify-center mb-8">
-                <div className="w-20 h-20 bg-gradient-orange rounded-2xl flex items-center justify-center shadow-lg">
-                  <MessageCircle className="w-10 h-10 text-white" />
-                </div>
-              </div>
-              <h3 className="text-2xl font-bold text-primary mb-4 text-center">
-                Chatbot propio
-              </h3>
-              <p className="text-muted-foreground text-center">
-                Chatbots inteligentes que atienden a tus clientes 24/7, automatizan reservas y gestionan consultas al instante.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section className="flex flex-col items-center justify-center text-center py-20 px-4 bg-gradient-to-b from-white to-blue-50">
+      <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+        Automatiza y optimiza tu negocio con Fluxo Services
+      </h1>
+      <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-8">
+        En Fluxo desarrollamos sistemas inteligentes para que tu negocio ahorre tiempo, mejore su gestión y ofrezca una experiencia moderna a sus clientes.
+      </p>
+      <a
+        href="#productos"
+        className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg transition"
+      >
+        Ver productos
+      </a>
     </section>
   );
 };
