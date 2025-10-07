@@ -1,29 +1,59 @@
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import SolutionsSection from "./components/SolutionsSection";
-import AutomationSection from "./components/AutomationSection";
-import SplitQRSection from "./components/SplitQRSection";
-import BenefitsSection from "./components/BenefitsSection";
-import PlansSection from "./components/PlansSection";
-import FAQSection from "./components/FAQSection";
-import Footer from "./components/Footer";
-import ProductsSection from "./components/ProductsSection";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/layout/Navigation";
+import Footer from "./components/layout/Footer";
+import Hero from "./components/sections/Hero";
+import Productos from "./components/sections/Productos";
+import Soluciones from "./components/sections/Soluciones";
+import Automatizacion from "./components/sections/Automatizacion";
+import Beneficios from "./components/sections/Beneficios";
+import Planes from "./components/sections/Planes";
+import FAQ from "./components/sections/FAQ";
+import Contacto from "./components/sections/Contacto";
 
 function App() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
-      <HeroSection />
-      <SolutionsSection />
-      <AutomationSection />
-      <SplitQRSection />
-      <BenefitsSection />
-      <PlansSection />
-      <FAQSection />
-      <Footer />
-      <ProductsSection />
-    </div>
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+
+        {/* Secciones principales en el orden correcto */}
+        <main className="flex-grow">
+          <section id="inicio">
+            <Hero />
+          </section>
+
+          <section id="productos">
+            <Productos />
+          </section>
+
+          <section id="soluciones">
+            <Soluciones />
+          </section>
+
+          <section id="automatizacion">
+            <Automatizacion />
+          </section>
+
+          <section id="beneficios">
+            <Beneficios />
+          </section>
+
+          <section id="planes">
+            <Planes />
+          </section>
+
+          <section id="faq">
+            <FAQ />
+          </section>
+
+          <section id="contacto">
+            <Contacto />
+          </section>
+        </main>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
