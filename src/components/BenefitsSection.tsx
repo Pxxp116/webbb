@@ -6,7 +6,7 @@ const BenefitsSection = () => {
       icon: Users,
       number: "01",
       title: "Gana más clientes",
-      description: "Al estar disponible 24/7 en WhatsApp, nunca pierdes una oportunidad de venta. Tus clientes pueden contactarte cuando quieran."
+      description: "Al estar disponible 24/7 en tu propio chat integrado, nunca pierdes una oportunidad de venta. Tus clientes pueden contactarte cuando quieran."
     },
     {
       icon: Award,
