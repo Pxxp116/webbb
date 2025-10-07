@@ -13,10 +13,9 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      {/* Contenido principal */}
       <main className="flex-grow">
         <HeroSection />
-        <ProductsSection /> {/* 👈 ahora va justo debajo del Hero */}
+        <ProductsSection /> {/* 👈 Justo debajo del Hero */}
         <SolutionsSection />
         <AutomationSection />
         <BenefitsSection />
@@ -24,7 +23,6 @@ const Index = () => {
         <FAQSection />
       </main>
 
-      {/* Footer siempre al final */}
       <Footer />
     </div>
   );
