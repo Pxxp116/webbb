@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/HeroSection";
 import Productos from "./components/ProductsSection";
-import Soluciones from "./components/AutomationSection";
 import Automatizacion from "./components/AutomationSection";
 import Beneficios from "./components/BenefitsSection";
 import Planes from "./components/PlansSection";
@@ -19,15 +18,11 @@ function App() {
             <Hero />
           </section>
 
-          {/* 👇 Sección Productos movida justo debajo del Hero */}
           <section id="productos">
             <Productos />
           </section>
 
-          <section id="soluciones">
-            <Soluciones />
-          </section>
-
+          {/* 👇 Solo una vez esta sección */}
           <section id="automatizacion">
             <Automatizacion />
           </section>
