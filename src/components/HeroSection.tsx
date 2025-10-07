@@ -1,43 +1,48 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Bot, MessageCircle } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative overflow-hidden">
-      <div className="container mx-auto px-6 py-32 md:py-40 flex flex-col md:flex-row items-center justify-between">
-        {/* Texto principal */}
-        <div className="flex-1 text-center md:text-left">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Automatización inteligente <br /> para negocios.
-          </h1>
-          <p className="text-lg text-gray-600 mb-10 max-w-xl">
-            Fluxo. Tu negocio, sin pausas. <br />
-            Diseñamos, desarrollamos e implementamos herramientas de
-            automatización que te ayudarán a trabajar de forma más inteligente.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a
-              href="#contacto"
-              className="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition-colors inline-flex items-center justify-center gap-2"
-            >
-              Contactar <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href="#demo"
-              className="border border-gray-300 px-6 py-3 rounded-full font-semibold text-gray-800 hover:bg-gray-100 transition-colors"
-            >
-              Probar Demo
-            </a>
+    <section id="hero" className="relative bg-gradient-subtle min-h-screen flex items-center overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      <div className="absolute top-20 right-20 w-72 h-72 bg-accent-orange/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+      
+      <div className="section-container relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Content */}
+          <div className="text-center lg:text-left">
+            <h1 className="text-hero text-primary mb-6">Automatización inteligente para negocios.</h1>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium">
+              Fluxo. Tu negocio, sin pausas.
+            </p>
+            <p className="text-lg text-muted-foreground mb-12 max-w-xl">
+              Diseñamos, desarrollamos e implementamos herramientas de automatización que te ayudarán a trabajar de forma más inteligente.
+            </p>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a href="https://wa.me/message/YC7W3UVLEHFKB1" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex items-center gap-2">Contactar<ArrowRight className="w-5 h-5" /></a>
+              <a href="https://fluxodemo.carrd.co" target="_blank" rel="noopener noreferrer" className="btn-outline inline-flex items-center gap-2">Probar Demo<Bot className="w-5 h-5" /></a>
+            </div>
           </div>
-        </div>
-
-        {/* Imagen lateral (mantén tu imagen original) */}
-        <div className="flex-1 flex justify-center mt-16 md:mt-0">
-          <img
-            src="/images/hero-illustration.png"
-            alt="Automatización Inteligente"
-            className="max-w-md w-full h-auto"
-          />
+          
+          {/* Visual */}
+          <div className="relative">
+            <div className="card-elevated bg-gradient-to-br from-white to-primary-light p-12 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+              <div className="flex items-center justify-center mb-8">
+                <div className="w-20 h-20 bg-gradient-orange rounded-2xl flex items-center justify-center shadow-lg">
+                  <MessageCircle className="w-10 h-10 text-white" />
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-primary mb-4 text-center">
+                WhatsApp Business
+              </h3>
+              <p className="text-muted-foreground text-center">
+                Chatbots inteligentes que atienden a tus clientes 24/7, automatizan reservas y gestionan consultas al instante.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
