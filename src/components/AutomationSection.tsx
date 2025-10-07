@@ -3,7 +3,7 @@ import { MessageSquare, Clock, Users, CheckCircle } from "lucide-react";
 
 const AutomationSection = () => {
   const benefits = [
-    { icon: MessageSquare, text: "Respuestas automáticas en WhatsApp" },
+    { icon: MessageSquare, text: "Respuestas automáticas en tu propio chat" },
     { icon: Clock, text: "Disponible 24 horas, 7 días a la semana" },
     { icon: Users, text: "Gestión de múltiples conversaciones" },
   ];
