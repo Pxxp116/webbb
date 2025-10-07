@@ -4,6 +4,7 @@ import { Menu, X } from "lucide-react";
 
 const sections = [
   { id: "hero", label: "Inicio" },
+  { id: "productos", label: "Productos" }, // ⬅️ NUEVO
   { id: "solutions", label: "Soluciones" },
   { id: "automation", label: "Automatización" },
   { id: "splitqr", label: "SplitQR" },
@@ -11,6 +12,7 @@ const sections = [
   { id: "plans", label: "Planes" },
   { id: "faq", label: "FAQ" },
 ];
+
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

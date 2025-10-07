@@ -4,7 +4,7 @@ const SplitQRSection = () => {
   const features = [
     { icon: QrCode, text: "Escanea el código QR de la mesa" },
     { icon: Users, text: "Selecciona qué elementos has pedido" },
-    { icon: CreditCard, text: "Paga solo tu parte al instante" },
+    { icon: CreditCard, text: "Paga solo tu parte o divide la cuenta al instante" },
   ];
 
   const benefits = [

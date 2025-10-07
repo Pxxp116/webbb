@@ -12,34 +12,44 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-hero text-primary mb-6">Automatización inteligente para negocios.</h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium">
-              Fluxo. Tu negocio, sin pausas.
+            <h1 className="text-hero text-primary mb-6">
+              Automatizar y optimizar tareas repetitivas implementando sistemas en negocios.
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0">
+              En Fluxo Services construimos sistemas que eliminan el trabajo manual, 
+              mejoran la experiencia del cliente y conectan tus operaciones en tiempo real.
             </p>
-            <p className="text-lg text-muted-foreground mb-12 max-w-xl">
-              Diseñamos, desarrollamos e implementamos herramientas de automatización que te ayudarán a trabajar de forma más inteligente.
-            </p>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a href="https://wa.me/message/YC7W3UVLEHFKB1" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex items-center gap-2">Contactar<ArrowRight className="w-5 h-5" /></a>
-              <a href="https://fluxodemo.carrd.co" target="_blank" rel="noopener noreferrer" className="btn-outline inline-flex items-center gap-2">Probar Demo<Bot className="w-5 h-5" /></a>
+
+            <div className="flex items-center gap-4 justify-center lg:justify-start">
+              <a href="#productos" className="btn-primary rounded-full px-6 py-3 inline-flex items-center gap-2">
+                Ver Productos <ArrowRight className="w-5 h-5" />
+              </a>
+              <a href="#plans" className="btn-outline rounded-full px-6 py-3">
+                Planes
+              </a>
             </div>
           </div>
-          
-          {/* Visual */}
-          <div className="relative">
-            <div className="card-elevated bg-gradient-to-br from-white to-primary-light p-12 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-              <div className="flex items-center justify-center mb-8">
-                <div className="w-20 h-20 bg-gradient-orange rounded-2xl flex items-center justify-center shadow-lg">
-                  <MessageCircle className="w-10 h-10 text-white" />
-                </div>
+
+          {/* Side cards (mantiene estética, quitar WhatsApp Business) */}
+          <div className="grid sm:grid-cols-2 gap-6 max-w-md mx-auto lg:mx-0">
+            <div className="card-feature p-6">
+              <div className="icon-circle mb-4">
+                <Bot className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-4 text-center">
-                WhatsApp Business
-              </h3>
+              <h3 className="text-lg font-semibold mb-2">GastroBot</h3>
               <p className="text-muted-foreground text-center">
-                Chatbots inteligentes que atienden a tus clientes 24/7, automatizan reservas y gestionan consultas al instante.
+                Un chatbot único por restaurante, totalmente editable desde su Dashboard, 
+                que actualiza reservas y pedidos en tiempo real.
+              </p>
+            </div>
+            <div className="card-feature p-6">
+              <div className="icon-circle mb-4">
+                <MessageCircle className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Split QR</h3>
+              <p className="text-muted-foreground text-center">
+                Pagos ágiles por mesa: cada comensal paga lo suyo o se divide la cuenta. 
+                Compatible con tarjeta y efectivo.
               </p>
             </div>
           </div>

@@ -45,8 +45,8 @@ const PlansSection = () => {
             </div>
 
             <p className="text-[#0b2545cc] mt-6 leading-7 max-w-prose">
-              El Plan Profesional de Fluxo te ofrece un asistente virtual por WhatsApp y voz,
-              junto con un panel de control integral para gestionar tu negocio desde un solo lugar.
+              El Plan Profesional de Fluxo te ofrece un asistente virtual por Chat,
+              junto con un panel de control integral para gestionar tu negocio desde un solo lugar y el sistema SplitQR para agilizar cobros y evitar largas colas a la hora de pagar cuentas divididas.
               Perfecto para restaurantes y comercios que buscan automatizar tareas, atender a más
               clientes y aumentar sus ventas sin esfuerzo.
             </p>

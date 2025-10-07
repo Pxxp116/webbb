@@ -30,7 +30,7 @@ const BenefitsSection = () => {
       icon: Smartphone,
       number: "05",
       title: "Fácil y familiar para tus clientes",
-      description: "Tu asistente funciona directamente en WhatsApp, la app que todos usan. No necesitan descargar nada nuevo."
+      description: "Tu asistente funciona independientemente, sin apps raras. No necesitan descargar nada nuevo."
     },
     {
       icon: Clock,
