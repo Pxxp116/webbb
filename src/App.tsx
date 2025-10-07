@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/layout/Navigation";
 import Footer from "./components/layout/Footer";
 import Hero from "./components/sections/Hero";
@@ -15,13 +15,12 @@ function App() {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Navbar />
-
-        {/* Secciones principales en el orden correcto */}
         <main className="flex-grow">
           <section id="inicio">
             <Hero />
           </section>
 
+          {/* 👇 MOVEMOS ESTA SECCIÓN AQUÍ */}
           <section id="productos">
             <Productos />
           </section>
@@ -50,7 +49,6 @@ function App() {
             <Contacto />
           </section>
         </main>
-
         <Footer />
       </div>
     </Router>
@@ -58,3 +56,4 @@ function App() {
 }
 
 export default App;
+
