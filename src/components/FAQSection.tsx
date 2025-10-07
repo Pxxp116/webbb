@@ -7,7 +7,7 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "¿Qué hace exactamente el bot y cómo ayuda a mi negocio?",
-      answer: "Nuestro chatbot funciona como un asistente virtual que atiende a tus clientes en WhatsApp las 24 horas. Puede responder preguntas frecuentes, tomar reservas, gestionar citas, proporcionar información sobre tus servicios y derivar consultas complejas a tu equipo humano. Esto te permite atender más clientes, reducir tiempo de respuesta y nunca perder una venta por no estar disponible."
+      answer: "Nuestro chatbot funciona como un asistente virtual que atiende a tus clientes las 24 horas desde tu propio panel de reservas. Puede responder preguntas frecuentes, tomar reservas, gestionar citas, proporcionar información sobre tus servicios y derivar consultas complejas a tu equipo humano. Esto te permite atender más clientes, reducir tiempo de respuesta y nunca perder una venta por no estar disponible."
     },
     {
       question: "¿Necesito tener conocimientos técnicos para usarlo?",
