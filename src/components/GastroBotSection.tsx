@@ -20,7 +20,7 @@ const GastroBotSection = () => {
 
         {/* Columna izquierda: textos (MISMA jerarquía visual que SplitQR) */}
         <div>
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-foreground/90 mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-primary">
             Gestiona reservas sin fricción
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
