@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/HeroSection";
 import Productos from "./components/ProductsSection";
+import SplitQRSection from "./components/SplitQRSection";
+import GastroBotSection from "./components/GastroBotSection";
 import Automatizacion from "./components/AutomationSection";
 import Beneficios from "./components/BenefitsSection";
 import Planes from "./components/PlansSection";
