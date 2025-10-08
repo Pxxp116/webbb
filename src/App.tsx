@@ -19,6 +19,15 @@ function App() {
           <section id="inicio">
             <Hero />
           </section>
+{/* 🧾 Nueva sección: SplitQR */}
+<section id="splitqr">
+  <SplitQRSection />
+</section>
+
+{/* 🤖 Nueva sección: GastroBot */}
+<section id="gastrobot">
+  <GastroBotSection />
+</section>
 
           <section id="productos">
             <Productos />
