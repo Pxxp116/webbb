@@ -23,7 +23,7 @@ const GastroBotSection = () => {
           <h2 className="text-4xl md:text-5xl font-extrabold text-primary">
             Gestiona reservas sin fricción
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="mt-4 text-muted-foreground max-w-prose">
             GastroBot automatiza la atención de tu restaurante: responde dudas, toma y confirma reservas,
             y coordina pedidos en tiempo real, para que tu equipo se concentre en la experiencia del cliente.
           </p>
@@ -35,7 +35,7 @@ const GastroBotSection = () => {
                 <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center">
                   <Icon className="w-5 h-5 text-primary" />
                 </div>
-                <span className="text-foreground/90">{text}</span>
+                <span className="font-medium text-foreground/90">{text}</span>
               </li>
             ))}
           </ul>
