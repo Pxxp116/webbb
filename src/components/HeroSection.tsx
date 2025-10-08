@@ -23,7 +23,7 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a href="https://wa.me/message/YC7W3UVLEHFKB1" target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex items-center gap-2">Contactar<ArrowRight className="w-5 h-5" /></a>
-              <a href="https://fluxodemo.carrd.co" target="_blank" rel="noopener noreferrer" className="btn-outline inline-flex items-center gap-2">Probar Demo<Bot className="w-5 h-5" /></a>
+              <a href="https://preview--gatrobot-999-lunes6-77548-81865-64714-11392.lovable.app/chatbot/a6697f05-6811-48dc-adc5-bdf585925c30" target="_blank" rel="noopener noreferrer" className="btn-outline inline-flex items-center gap-2">Probar Demo<Bot className="w-5 h-5" /></a>
             </div>
           </div>
           
