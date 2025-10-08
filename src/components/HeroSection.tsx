@@ -17,7 +17,7 @@ const HeroSection = () => {
               Fluxo. Tu negocio, sin pausas.
             </p>
             <p className="text-lg text-muted-foreground mb-12 max-w-xl">
-              Diseñamos, desarrollamos e implementamos herramientas de automatización que te ayudarán a trabajar de forma más inteligente.
+              Diseñamos, desarrollamos e implementamos herramientas y sistemas de automatización y optimización que ayudarán a tu negocio a trabajar de forma más inteligente.
             </p>
             
             {/* CTA Buttons */}
@@ -36,7 +36,7 @@ const HeroSection = () => {
                 </div>
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4 text-center">
-                WhatsApp Business
+                Chatbot propio
               </h3>
               <p className="text-muted-foreground text-center">
                 Chatbots inteligentes que atienden a tus clientes 24/7, automatizan reservas y gestionan consultas al instante.
