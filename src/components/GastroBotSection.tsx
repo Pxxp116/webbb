@@ -1,98 +1,103 @@
-import { MessageCircle, CalendarCheck, Clock, CheckCircle, QrCode } from "lucide-react";
+import { MessageCircle, CalendarCheck, Clock, CheckCircle } from "lucide-react";
 
 const GastroBotSection = () => {
   const features = [
-    { icon: MessageCircle, text: "Atiende a tus clientes por WhatsApp y web automáticamente" },
+    { icon: MessageCircle, text: "Atiende automáticamente a tus clientes por WhatsApp y web" },
     { icon: CalendarCheck, text: "Gestiona reservas y confirma disponibilidad en tiempo real" },
-    { icon: QrCode, text: "Integra menús, pedidos y reservas en un solo sistema" },
+    { icon: Clock, text: "Ahorra tiempo y reduce errores humanos en el proceso" },
   ];
 
   const benefits = [
-    "Menos llamadas y mensajes manuales",
-    "Cero dobles reservas",
-    "Respuestas instantáneas 24/7",
-    "Ahorro de tiempo del personal",
+    "Sin llamadas manuales",
+    "Reservas confirmadas al instante",
+    "Atención 24/7 sin esfuerzo",
+    "Más tiempo para tus clientes",
   ];
 
   return (
-    <section id="gastrobot" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-
-        {/* Columna izquierda: textos (MISMA jerarquía visual que SplitQR) */}
+    <section id="gastrobot" className="section-container py-24 bg-gradient-subtle">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
+        {/* Izquierda: texto y bullets */}
         <div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-primary">
-            Gestiona reservas sin fricción
+            Automatiza tus reservas con GastroBot
           </h2>
           <p className="mt-4 text-muted-foreground max-w-prose">
-            GastroBot automatiza la atención de tu restaurante: responde dudas, toma y confirma reservas,
-            y coordina pedidos en tiempo real, para que tu equipo se concentre en la experiencia del cliente.
+            GastroBot permite a tu restaurante gestionar reservas y pedidos de forma automática.
+            Atiende mensajes, confirma mesas y responde consultas mientras tú te concentras en tu negocio.
           </p>
 
-          {/* Lista de pasos/funcionalidades */}
-          <ul className="space-y-4 text-left mb-8">
-            {features.map(({ icon: Icon, text }, i) => (
-              <li key={i} className="flex items-center gap-3">
+          <div className="mt-8 space-y-4">
+            {features.map((f, i) => (
+              <div key={i} className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary/5 flex items-center justify-center">
-                  <Icon className="w-5 h-5 text-primary" />
+                  <f.icon className="w-5 h-5 text-accent-orange" />
                 </div>
-                <span className="font-medium text-foreground/90">{text}</span>
-              </li>
-            ))}
-          </ul>
-
-          {/* Beneficios en grid (misma composición que SplitQR) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-foreground/90">
-            {benefits.map((b, i) => (
-              <div key={i} className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-accent-orange" />
-                <span>{b}</span>
+                <span className="font-medium text-foreground/90">{f.text}</span>
               </div>
             ))}
           </div>
 
-          <a
-            href="#contacto"
-            className="inline-flex mt-8 bg-accent-orange hover:bg-accent-orange/90 text-white px-6 py-3 rounded-full font-medium transition-colors"
-          >
-            🚀 Ya disponible
-          </a>
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {benefits.map((t, i) => (
+              <div key={i} className="flex items-center gap-2 text-sm">
+                <CheckCircle className="w-4 h-4 text-accent-orange" />
+                <span>{t}</span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8">
+            <a
+              href="https://wa.me/message/YC7W3UVLEHFKB1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              ¡Ya disponible!
+              <MessageCircle className="w-5 h-5" />
+            </a>
+          </div>
         </div>
 
-        {/* Columna derecha: mockup (estilo gemelo al de SplitQR) */}
+        {/* Derecha: mockup igual al de SplitQR */}
         <div className="relative">
-          <div className="relative bg-white rounded-3xl shadow-xl border border-border overflow-hidden">
-            <div className="bg-gradient-to-br from-primary-light to-accent-orange-light h-24 w-full" />
-
-            <div className="p-6 space-y-4">
-              <div className="w-14 h-14 -mt-12 rounded-2xl bg-primary text-white flex items-center justify-center shadow-lg">
-                <MessageCircle className="w-7 h-7" />
+          <div className="card-elevated bg-white/80 rounded-3xl p-6 border border-border shadow-sm">
+            <div className="bg-gradient-to-br from-primary-light to-accent-orange-light p-8 rounded-2xl">
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+                  <MessageCircle className="w-10 h-10 text-primary" />
+                </div>
               </div>
 
-              <h3 className="text-2xl font-semibold text-foreground/90">GastroBot</h3>
-              <p className="text-muted-foreground">
-                Asistente virtual para reservas y pedidos en tu restaurante.
-              </p>
+              <h3 className="text-xl font-bold text-primary text-center mb-4">
+                GastroBot
+              </h3>
 
-              {/* Tarjeta tipo conversación/confirmación, con el mismo look de tarjetas de SplitQR */}
-              <div className="space-y-3">
-                <div className="bg-white/80 p-3 rounded-lg">
-                  <div className="text-sm text-muted-foreground mb-1">Usuario</div>
-                  <div className="text-foreground/90">“Reserva para 4 mañana a las 20:00”</div>
-                </div>
-                <div className="bg-white/80 p-3 rounded-lg">
-                  <div className="text-sm text-muted-foreground mb-1">GastroBot</div>
-                  <div className="text-foreground/90">
-                    Perfecto, mesa confirmada para 4 mañana a las 20:00. ¿Nombre y teléfono, por favor?
+              <div className="space-y-3 text-sm">
+                <div className="bg-white/70 p-3 rounded-lg">
+                  <div className="flex justify-between items-center">
+                    <span className="font-medium text-gray-700">Usuario</span>
+                    <span className="text-gray-600">“Reserva para 4 mañana a las 20:00”</span>
                   </div>
                 </div>
-                <div className="bg-primary text-white p-3 rounded-lg font-medium text-center">
+                <div className="bg-white/70 p-3 rounded-lg">
+                  <div className="flex justify-between items-start">
+                    <span className="font-medium text-gray-700">GastroBot</span>
+                    <span className="text-gray-600 text-right">
+                      Perfecto, mesa confirmada para 4 mañana a las 20:00. <br />
+                      ¿Nombre y teléfono, por favor?
+                    </span>
+                  </div>
+                </div>
+                <div className="bg-accent-orange text-white p-3 rounded-lg font-medium text-center">
                   Reserva confirmada ✅
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Decoraciones flotantes (mismo patrón que SplitQR) */}
+          {/* Decoraciones flotantes idénticas a SplitQR */}
           <div className="absolute -top-4 -right-4 w-16 h-16 bg-accent-orange rounded-2xl flex items-center justify-center shadow-lg">
             <Clock className="w-8 h-8 text-white" />
           </div>
