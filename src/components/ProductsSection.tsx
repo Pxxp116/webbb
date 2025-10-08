@@ -1,4 +1,5 @@
 import React from "react";
+import { QrCode, MessageCircle } from "lucide-react";
 
 const ProductsSection = () => {
   return (
@@ -11,11 +12,9 @@ const ProductsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* GastroBot */}
           <div className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition">
-            <img
-              src="/images/robot.png"
-              alt="GastroBot"
-              className="w-32 h-32 object-contain mx-auto mb-6"
-            />
+            <div className="w-32 h-32 mx-auto mb-6 rounded-2xl bg-primary/5 flex items-center justify-center">
+              <MessageCircle className="w-16 h-16 text-accent-orange" />
+            </div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-3">
               GastroBot
             </h3>
@@ -28,11 +27,9 @@ const ProductsSection = () => {
 
           {/* Split QR */}
           <div className="bg-white rounded-3xl shadow-lg p-8 hover:shadow-xl transition">
-            <img
-              src="/images/qr.png"
-              alt="Split QR"
-              className="w-32 h-32 object-contain mx-auto mb-6"
-            />
+            <div className="w-32 h-32 mx-auto mb-6 rounded-2xl bg-primary/5 flex items-center justify-center">
+              <QrCode className="w-16 h-16 text-accent-orange" />
+            </div>
             <h3 className="text-2xl font-semibold text-gray-900 mb-3">
               Split QR
             </h3>
