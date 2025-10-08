@@ -12,9 +12,10 @@ const AutomationSection = () => {
         crecer tu negocio.
       </p>
 
-      {/* 🎥 Video principal */}
+      {/* 🎥 Video demostrativo */}
       <div className="w-full max-w-3xl rounded-2xl shadow-lg overflow-hidden">
         <video
+          src={`${import.meta.env.BASE_URL}assets/FluxoAD.mp4`}
           className="w-full h-auto rounded-2xl"
           controls
           autoPlay
@@ -22,8 +23,6 @@ const AutomationSection = () => {
           loop
           playsInline
         >
-          {/* ⚠️ Ruta corregida */}
-          <source src="/assets/FluxoAD.mp4" type="video/mp4" />
           Tu navegador no soporta la reproducción de video.
         </video>
       </div>
