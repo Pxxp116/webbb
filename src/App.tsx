@@ -52,7 +52,7 @@ function App() {
           </section>
         </main>
         <Footer />
-        <FooterLegal /> {/* ✅ añadimos la pestaña legal al final */}
+        {/* ❌ Eliminado <FooterLegal /> porque ahora se gestiona desde el footer azul */}
       </div>
     </Router>
   );
