@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import logo from "@/assets/logo-fluxo.png";
 import { Menu, X } from "lucide-react";
 
 const sections = [
@@ -13,8 +12,6 @@ const sections = [
   { id: "contacto", label: "Contacto" },
 ];
 
-
-
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -27,7 +24,7 @@ export default function Navbar() {
 
     const getHeaderOffset = () => {
       const h = document.querySelector("header") as HTMLElement | null;
-      return (h?.offsetHeight ?? 80);
+      return h?.offsetHeight ?? 80;
     };
 
     let ticking = false;
@@ -35,8 +32,6 @@ export default function Navbar() {
     const computeActive = () => {
       try {
         const headerOffset = getHeaderOffset();
-
-        // Empuja el contenido EXACTAMENTE la altura del header en móvil (evita solape con el hero)
         const isMobile = window.matchMedia("(max-width: 767.98px)").matches;
         if (isMobile) {
           document.body.style.paddingTop = `${headerOffset}px`;
@@ -45,12 +40,10 @@ export default function Navbar() {
         }
 
         const y = window.scrollY + headerOffset + 1;
-
         const sectionEls = sections
-          .map(s => ({ id: s.id, el: document.getElementById(s.id) as HTMLElement | null }))
+          .map((s) => ({ id: s.id, el: document.getElementById(s.id) as HTMLElement | null }))
           .filter((x): x is { id: string; el: HTMLElement } => !!x.el);
 
-        // Mientras el menú móvil está abierto, no activamos "scrolled" (evita cambios de altura en móvil)
         setScrolled(window.scrollY > 8 && !open);
 
         let current = "hero";
@@ -64,7 +57,10 @@ export default function Navbar() {
 
     const onScroll = () => {
       if (!ticking) {
-        window.requestAnimationFrame(() => { computeActive(); ticking = false; });
+        window.requestAnimationFrame(() => {
+          computeActive();
+          ticking = false;
+        });
         ticking = true;
       }
     };
@@ -97,7 +93,10 @@ export default function Navbar() {
   const NavLink = ({ id, label }: { id: string; label: string }) => (
     <a
       href={`#${id}`}
-      onClick={() => { setOpen(false); setActive(id); }}
+      onClick={() => {
+        setOpen(false);
+        setActive(id);
+      }}
       className="relative px-3 py-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
     >
       {label}
@@ -112,33 +111,52 @@ export default function Navbar() {
 
   return (
     <header
-      // Safe area para notch en iOS (móvil)
       style={{ ["--sat" as any]: "env(safe-area-inset-top)" }}
       className={
         "fixed top-0 inset-x-0 z-50 bg-white/90 md:backdrop-blur border-b border-border transform-gpu [will-change:transform] " +
-        // En móvil, respetamos safe area; en desktop lo anulamos
         "pt-[var(--sat)] md:!pt-0 " +
-        // ⬇️ Desktop EXACTO como antes: py-2/py-4 y shadow solo al hacer scroll
         (scrolled ? "md:py-2 md:shadow-sm" : "md:py-4")
       }
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[48px] md:h-auto">
-        <a href="#hero" className="flex items-center gap-2">
-          {/* Móvil: fijo; Desktop: comportamiento original */}
+        {/* ✅ Solo el nuevo logo desde /public */}
+        <a href="#hero" className="flex items-center">
           <img
-            src={logo}
+            src="/logo-fluxo.png"
             alt="Fluxo"
-            className={"w-auto transition-all " + (scrolled ? "md:h-10 h-8" : "md:h-12 h-8")}
+            className={
+              "transition-all duration-300 object-contain " +
+              (scrolled ? "md:h-10 h-8" : "md:h-12 h-9")
+            }
           />
         </a>
 
         <div className="hidden md:flex items-center gap-1">
-          {sections.map((s) => <NavLink key={s.id} id={s.id} label={s.label} />)}
-          <a href="https://fluxodemo.carrd.co" target="_blank" rel="noopener noreferrer" className="ml-4 btn-outline rounded-full px-5 py-2">Probar demo</a>
-          <a href="https://wa.me/message/YC7W3UVLEHFKB1" target="_blank" rel="noopener noreferrer" className="btn-primary rounded-full px-5 py-2">Contactar</a>
+          {sections.map((s) => (
+            <NavLink key={s.id} id={s.id} label={s.label} />
+          ))}
+          <a
+            href="https://fluxodemo.carrd.co"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 btn-outline rounded-full px-5 py-2"
+          >
+            Probar demo
+          </a>
+          <a
+            href="https://wa.me/message/YC7W3UVLEHFKB1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary rounded-full px-5 py-2"
+          >
+            Contactar
+          </a>
         </div>
 
-        <button onClick={() => setOpen(v => !v)} className="md:hidden p-2 rounded-xl border border-border">
+        <button
+          onClick={() => setOpen((v) => !v)}
+          className="md:hidden p-2 rounded-xl border border-border"
+        >
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </nav>
