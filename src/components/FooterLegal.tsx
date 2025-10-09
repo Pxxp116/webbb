@@ -11,7 +11,6 @@ export default function FooterLegal({
   content: string;
   title: string;
 }) {
-  // Bloquea el scroll del body al abrir
   useEffect(() => {
     if (!open) return;
     const prev = document.body.style.overflow;
@@ -29,13 +28,11 @@ export default function FooterLegal({
       role="dialog"
       aria-modal="true"
     >
-      {/* Backdrop */}
       <button
         onClick={onClose}
         className="absolute inset-0 bg-black/50 backdrop-blur-sm"
         aria-label="Cerrar"
       />
-      {/* Panel */}
       <div className="relative bg-white w-full sm:max-w-4xl max-h-[85vh] overflow-y-auto rounded-t-2xl sm:rounded-2xl shadow-lg">
         <div className="flex items-center justify-between px-4 sm:px-6 py-3 border-b">
           <h2 className="text-lg font-semibold">{title}</h2>
