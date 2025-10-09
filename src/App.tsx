@@ -9,7 +9,6 @@ import Automatizacion from "./components/AutomationSection";
 import Beneficios from "./components/BenefitsSection";
 import Planes from "./components/PlansSection";
 import FAQ from "./components/FAQSection";
-import FooterLegal from "./components/FooterLegal"; // ✅ nuevo componente
 
 function App() {
   return (

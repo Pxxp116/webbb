@@ -1,0 +1,181 @@
+1. IDENTIFICACIÓN DEL RESPONSABLE DEL TRATAMIENTO
+En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (en adelante, "RGPD"), y de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (en adelante, "LOPDGDD"), se informa de lo siguiente:
+Responsable del tratamiento:
+PX Corporation
+Titulares: Alejandro Mata Ortega y Nicolás Díaz Corominas
+Domicilio: España
+Correo electrónico de contacto: pxservices@pxcorporation.org                   
+Ámbito territorial: Unión Europea
+La presente Política de Privacidad se aplica a todos los productos y servicios ofrecidos por Fluxo Services, incluyendo específicamente:
+•	Fluxo Services (plataforma corporativa y marca principal)
+•	GastroBot (chatbot de automatización para restaurantes: gestión de reservas, pagos y comunicación con clientes)
+•	Split-QR (sistema de pagos individualizados mediante códigos QR)
+________________________________________
+2. DATOS PERSONALES RECOGIDOS
+Fluxo Services puede recoger y tratar las siguientes categorías de datos personales de los usuarios finales y clientes de los negocios que utilizan nuestros servicios:
+2.1. Datos de identificación y contacto
+•	Número de teléfono
+•	Dirección de correo electrónico
+2.2. Datos de actividad y transaccionales
+•	Mensajes enviados y recibidos a través de los chatbots
+•	Historial de reservas realizadas
+•	Historial de transacciones y pagos efectuados
+•	Datos de uso de la plataforma y los servicios
+2.3. Datos proporcionados voluntariamente
+•	Cualquier información adicional que el usuario decida proporcionar durante su interacción con nuestros sistemas
+No recogemos datos sensibles (origen racial o étnico, opiniones políticas, convicciones religiosas o filosóficas, datos de salud, orientación sexual) salvo que sea estrictamente necesario para la prestación del servicio y siempre con el consentimiento explícito del interesado.
+________________________________________
+3. FINALIDAD Y LEGITIMACIÓN DEL TRATAMIENTO
+3.1. Finalidades del tratamiento
+Los datos personales recogidos serán tratados con las siguientes finalidades:
+a) Prestación del servicio contratado: Automatizar y optimizar la relación entre los negocios suscritos y sus clientes finales mediante sistemas de inteligencia artificial y chatbots.
+b) Gestión de reservas: Procesar, confirmar y gestionar las reservas realizadas por los usuarios a través de GastroBot.
+c) Procesamiento de pagos: Facilitar las transacciones económicas mediante Split-QR y otros módulos de pago integrados.
+d) Gestión de comunicaciones: Enviar y recibir mensajes en tiempo real entre los negocios y sus clientes a través de nuestros sistemas automatizados.
+e) Soporte técnico y atención al cliente: Proporcionar asistencia técnica y resolver incidencias relacionadas con el uso de nuestros servicios.
+f) Funcionalidad de CRM: Ofrecer herramientas de gestión de relaciones con clientes a los negocios suscritos, permitiendo un mejor conocimiento y seguimiento de sus clientes.
+g) Mejora y desarrollo de servicios: Analizar el uso de nuestras plataformas para optimizar su funcionamiento y desarrollar nuevas funcionalidades.
+h) Cumplimiento de obligaciones legales: Conservar información necesaria para el cumplimiento de obligaciones fiscales, contables y regulatorias.
+Fluxo Services no utiliza los datos personales recogidos con fines publicitarios externos ni los comparte con terceros para campañas de marketing ajenas a nuestros servicios.
+3.2. Base jurídica del tratamiento
+El tratamiento de sus datos personales se fundamenta en las siguientes bases jurídicas conforme al artículo 6 del RGPD:
+a) Consentimiento del interesado (artículo 6.1.a RGPD): Al utilizar nuestros servicios, el usuario otorga su consentimiento informado para el tratamiento de sus datos personales con las finalidades descritas.
+b) Ejecución de un contrato (artículo 6.1.b RGPD): El tratamiento es necesario para la ejecución del contrato de prestación de servicios entre Fluxo Services y los negocios clientes, así como para la prestación efectiva del servicio a los usuarios finales.
+c) Interés legítimo (artículo 6.1.f RGPD): En determinados casos, como la mejora de nuestros servicios y la prevención de fraude, el tratamiento se basa en el interés legítimo del responsable.
+d) Cumplimiento de obligaciones legales (artículo 6.1.c RGPD): Cuando el tratamiento sea necesario para cumplir con obligaciones fiscales, contables o de otra índole impuestas por la normativa aplicable.
+________________________________________
+4. CESIÓN A TERCEROS Y TRANSFERENCIAS INTERNACIONALES
+4.1. Comunicación de datos a terceros
+Fluxo Services podrá comunicar los datos personales a terceros prestadores de servicios que actúan como encargados del tratamiento, necesarios para la prestación de nuestros servicios:
+4.1.1. Supabase
+•	Finalidad: Infraestructura de base de datos y servicios de autenticación
+•	Naturaleza del tratamiento: Almacenamiento y gestión de datos
+•	Ubicación: Estados Unidos (con garantías adecuadas conforme al RGPD)
+•	Garantías: Supabase cumple con las cláusulas contractuales tipo aprobadas por la Comisión Europea y el Marco de Privacidad de Datos UE-EE.UU. (EU-U.S. Data Privacy Framework)
+4.1.2. Stripe
+•	Finalidad: Procesamiento de pagos y gestión de transacciones económicas
+•	Naturaleza del tratamiento: Gestión de cobros, verificación de pagos y prevención de fraude
+•	Ubicación: Estados Unidos y Unión Europea
+•	Garantías: Stripe cumple con el RGPD y el Marco de Privacidad de Datos UE-EE.UU., implementando medidas de seguridad certificadas (PCI-DSS Level 1)
+4.1.3. Gumroad
+•	Finalidad: Venta de licencias y suscripciones exclusivamente para el producto Fluxo Services (no para datos de clientes finales de los negocios)
+•	Naturaleza del tratamiento: Gestión de pagos y licencias
+•	Ubicación: Estados Unidos
+•	Garantías: Gumroad aplica salvaguardas adecuadas conforme a la normativa de protección de datos
+4.2. Transferencias internacionales de datos
+Algunos de los encargados del tratamiento mencionados están ubicados en países fuera del Espacio Económico Europeo. En todos los casos, Fluxo Services garantiza que dichas transferencias se realizan con arreglo a los mecanismos legalmente previstos:
+•	Cláusulas contractuales tipo aprobadas por la Comisión Europea
+•	Certificación bajo el Marco de Privacidad de Datos UE-EE.UU. (EU-U.S. Data Privacy Framework)
+•	Decisiones de adecuación adoptadas por la Comisión Europea
+•	Otras garantías apropiadas conforme al Capítulo V del RGPD
+4.3. No cesión a terceros con fines comerciales
+Fluxo Services no vende, alquila ni cede datos personales a terceros para finalidades comerciales o publicitarias ajenas a la prestación del servicio contratado.
+4.4. Comunicaciones por obligación legal
+Los datos personales podrán ser comunicados a autoridades públicas, jueces y tribunales cuando exista una obligación legal de hacerlo conforme a la normativa aplicable.
+________________________________________
+5. PLAZO DE CONSERVACIÓN DE LOS DATOS
+5.1. Criterio general de conservación
+Los datos personales se conservarán durante el tiempo estrictamente necesario para cumplir con las finalidades para las que fueron recogidos, aplicando los siguientes criterios:
+a) Durante la prestación del servicio: Los datos se mantendrán activos mientras el usuario o el negocio cliente utilice nuestros servicios.
+b) Eliminación a solicitud del usuario: Los datos serán eliminados cuando el usuario final o el negocio cliente solicite expresamente su supresión, ejercitando su derecho de supresión conforme al artículo 17 del RGPD.
+c) Eliminación manual: Los usuarios y negocios clientes tienen la posibilidad de eliminar sus datos de forma manual a través de las funcionalidades habilitadas en nuestras plataformas.
+5.2. Conservación por obligaciones legales
+Una vez finalizada la relación contractual o eliminados los datos a petición del interesado, Fluxo Services podrá conservar los datos personales debidamente bloqueados durante los plazos establecidos por la legislación aplicable para atender posibles responsabilidades derivadas del tratamiento, incluyendo:
+•	Obligaciones fiscales y contables: hasta 6 años desde la última anotación (conforme al Código de Comercio y normativa tributaria)
+•	Datos de facturación y transacciones: conforme a la normativa fiscal aplicable
+•	Información necesaria para la defensa frente a reclamaciones: hasta la prescripción de las posibles acciones legales
+5.3. Eliminación segura
+Transcurridos los plazos de conservación aplicables, los datos personales serán eliminados de forma segura y definitiva, mediante procedimientos que garanticen su destrucción irreversible.
+________________________________________
+6. DERECHOS DEL USUARIO
+De conformidad con el RGPD y la LOPDGDD, los usuarios tienen reconocidos y pueden ejercitar los siguientes derechos:
+6.1. Derecho de acceso (artículo 15 RGPD)
+Obtener confirmación de si Fluxo Services está tratando datos personales que le conciernen y, en tal caso, obtener información sobre los datos concretos objeto de tratamiento y las condiciones del tratamiento.
+6.2. Derecho de rectificación (artículo 16 RGPD)
+Obtener la rectificación de los datos personales inexactos o incompletos que le conciernen.
+6.3. Derecho de supresión o "derecho al olvido" (artículo 17 RGPD)
+Obtener la supresión de los datos personales cuando concurra alguna de las circunstancias previstas en el RGPD, incluyendo cuando los datos ya no sean necesarios para los fines para los que fueron recogidos.
+6.4. Derecho de limitación del tratamiento (artículo 18 RGPD)
+Obtener la limitación del tratamiento de los datos cuando se cumpla alguna de las condiciones establecidas en el RGPD.
+6.5. Derecho a la portabilidad (artículo 20 RGPD)
+Recibir los datos personales que le incumban en un formato estructurado, de uso común y lectura mecánica, y transmitirlos a otro responsable cuando el tratamiento esté basado en el consentimiento o en un contrato y se realice por medios automatizados.
+6.6. Derecho de oposición (artículo 21 RGPD)
+Oponerse al tratamiento de sus datos personales cuando el tratamiento esté basado en el interés legítimo del responsable o en el interés público.
+6.7. Derecho a no ser objeto de decisiones individuales automatizadas (artículo 22 RGPD)
+No ser objeto de una decisión basada únicamente en el tratamiento automatizado, incluida la elaboración de perfiles, que produzca efectos jurídicos o le afecte significativamente de modo similar.
+6.8. Derecho a retirar el consentimiento
+Cuando el tratamiento esté basado en el consentimiento, el usuario tiene derecho a retirarlo en cualquier momento, sin que ello afecte a la licitud del tratamiento basado en el consentimiento previo a su retirada.
+6.9. Ejercicio de los derechos
+Para ejercitar cualquiera de estos derechos, el usuario puede dirigirse a Fluxo Services mediante:
+•	Correo electrónico: pxservices@pxcorporation.org
+•	Solicitud escrita indicando claramente el derecho que desea ejercitar, acompañada de copia del DNI/NIE o documento identificativo equivalente
+Fluxo Services responderá a las solicitudes en el plazo máximo de un mes desde la recepción, pudiendo prorrogarse dos meses más en caso de solicitudes complejas, informando al interesado de dicha prórroga.
+6.10. Derecho a reclamar ante la autoridad de control
+Si el usuario considera que el tratamiento de sus datos personales vulnera la normativa de protección de datos, tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD):
+•	Sede electrónica: www.aepd.es
+•	Dirección postal: C/ Jorge Juan, 6, 28001 Madrid
+•	Teléfono: 901 100 099 / 91 266 35 17
+________________________________________
+7. SEGURIDAD DE LOS DATOS
+Fluxo Services se compromete a garantizar la seguridad de los datos personales y ha implementado las medidas técnicas y organizativas apropiadas para proteger los datos contra la destrucción accidental o ilícita, la pérdida, alteración, comunicación o acceso no autorizados, conforme a lo establecido en el artículo 32 del RGPD.
+7.1. Medidas técnicas de seguridad
+•	Cifrado de datos: Tanto en tránsito (mediante protocolos TLS/SSL) como en reposo en las bases de datos
+•	Control de acceso: Sistemas de autenticación robusta y gestión de permisos basada en roles
+•	Firewalls y protección perimetral: Para prevenir accesos no autorizados a los sistemas
+•	Copias de seguridad: Realizadas periódicamente y almacenadas de forma cifrada
+•	Monitorización continua: Detección de actividades anómalas y posibles incidentes de seguridad
+•	Actualizaciones de seguridad: Mantenimiento actualizado de todos los sistemas y componentes
+7.2. Medidas organizativas
+•	Política de privacidad y seguridad: Documentación interna y procedimientos de actuación
+•	Formación del personal: Capacitación continua en materia de protección de datos
+•	Acuerdos de confidencialidad: Con todo el personal que tiene acceso a datos personales
+•	Evaluación de riesgos: Análisis periódico de los riesgos para la seguridad de los datos
+•	Plan de respuesta ante incidentes: Procedimientos establecidos para la gestión de brechas de seguridad
+7.3. Proveedores de servicios
+Fluxo Services garantiza que todos sus encargados del tratamiento (Supabase, Stripe, Gumroad) cumplen con estándares de seguridad equivalentes y ofrecen garantías suficientes para aplicar medidas técnicas y organizativas apropiadas conforme al RGPD.
+7.4. Notificación de brechas de seguridad
+En caso de que se produjera una violación de la seguridad de los datos personales que entrañe un riesgo para los derechos y libertades de los interesados, Fluxo Services:
+•	Notificará la brecha a la Agencia Española de Protección de Datos en el plazo de 72 horas
+•	Comunicará la incidencia a los usuarios afectados cuando exista un alto riesgo para sus derechos y libertades
+•	Documentará internamente todas las brechas de seguridad, sus efectos y las medidas adoptadas
+________________________________________
+8. MODIFICACIONES DE LA POLÍTICA DE PRIVACIDAD
+Fluxo Services se reserva el derecho de modificar la presente Política de Privacidad para adaptarla a novedades legislativas, jurisprudenciales, o cambios en las prácticas de tratamiento de datos.
+8.1. Comunicación de cambios
+Cualquier modificación de esta Política será publicada en la página web de Fluxo Services (www.fluxoservices.com) y en las plataformas de cada producto (GastroBot, Split-QR), indicando claramente la fecha de la última actualización.
+8.2. Cambios sustanciales
+Cuando se produzcan cambios sustanciales que afecten significativamente a los derechos de los usuarios, Fluxo Services:
+•	Informará a los usuarios mediante notificación por correo electrónico u otros medios de comunicación habituales
+•	Solicitará, cuando sea legalmente necesario, un nuevo consentimiento para el tratamiento de datos conforme a las nuevas condiciones
+8.3. Aceptación de las modificaciones
+El uso continuado de los servicios de Fluxo Services tras la publicación de las modificaciones constituye la aceptación de las mismas. Si el usuario no está de acuerdo con los cambios introducidos, deberá cesar en el uso de los servicios y podrá ejercitar su derecho de supresión de datos.
+________________________________________
+9. CONTACTO Y DELEGADO DE PROTECCIÓN DE DATOS
+9.1. Información y consultas
+Para cualquier duda, aclaración o solicitud relacionada con la presente Política de Privacidad o con el tratamiento de sus datos personales, puede contactar con Fluxo Services a través de:
+Correo electrónico: pxservices@pxcorporation.org
+Asunto recomendado: "Protección de Datos - [indicar motivo de la consulta]"
+9.2. Datos de contacto del responsable
+Fluxo Services
+Titulares: Alejandro Mata Ortega y Nicolás Díaz Corominas
+Correo electrónico general: pxservices@pxcorporation.org 
+Sitio web: www.fluxoservices.com
+9.3. Compromiso con la privacidad
+Fluxo Services se compromete a responder todas las consultas y solicitudes relacionadas con la protección de datos en el menor tiempo posible y, en todo caso, dentro de los plazos legalmente establecidos.
+________________________________________
+10. LEGISLACIÓN APLICABLE
+La presente Política de Privacidad se rige por la legislación española y europea en materia de protección de datos personales, específicamente:
+•	Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016 (RGPD)
+•	Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD)
+•	Legislación complementaria española y europea aplicable en materia de privacidad y protección de datos
+________________________________________
+11. CONSENTIMIENTO INFORMADO
+Al utilizar los servicios de Fluxo Services, GastroBot o Split-QR, el usuario declara:
+•	Haber leído y comprendido la presente Política de Privacidad
+•	Conocer sus derechos en materia de protección de datos personales
+•	Otorgar su consentimiento libre, informado, específico e inequívoco para el tratamiento de sus datos personales conforme a lo establecido en este documento
+El usuario puede retirar su consentimiento en cualquier momento mediante el procedimiento establecido en el apartado 6 de esta Política.
+________________________________________
+Fecha de última actualización: 9 de octubre de 2025
+Fluxo Services
+Automatización inteligente para tu negocio

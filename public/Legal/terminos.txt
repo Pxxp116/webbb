@@ -1,0 +1,307 @@
+TÉRMINOS Y CONDICIONES DE USO
+Fluxo Services (marca comercial de PX Corporation)
+Última actualización: 9 de octubre de 2025
+________________________________________
+1. OBJETO Y ACEPTACIÓN
+Los presentes Términos y Condiciones regulan el acceso y uso de los servicios de software ofrecidos bajo la marca Fluxo Services, propiedad de PX Corporation, incluyendo los productos GastroBot y Split-QR (en adelante, "los Servicios").
+El acceso y utilización de los Servicios implica la aceptación plena y sin reservas de todos los términos aquí establecidos. Si no está de acuerdo con estos términos, le rogamos que no utilice nuestros Servicios.
+Estos Términos y Condiciones están disponibles de forma permanente en la sección legal de nuestro sitio web y podrán ser almacenados y reproducidos por el usuario.
+________________________________________
+2. IDENTIFICACIÓN DEL TITULAR
+Denominación social: PX Corporation
+Marca comercial: Fluxo Services
+Representantes legales: Alejandro Mata Ortega y Nicolás Díaz Corominas
+Domicilio social: España
+CIF: 
+Contacto: pxservices@pxcorporation.org
+Sitio web: www.fluxoservices.com
+PX Corporation es una empresa española de tecnología y automatización que opera diversas marcas de software. Fluxo Services constituye su división especializada en soluciones SaaS basadas en inteligencia artificial para la automatización de procesos empresariales.
+________________________________________
+3. DESCRIPCIÓN DE LOS SERVICIOS
+Fluxo Services ofrece software como servicio (SaaS) para empresas del sector de restauración y hostelería, mediante los siguientes productos:
+3.1. GastroBot
+Sistema de chatbot automatizado basado en inteligencia artificial que permite a los negocios:
+•	Gestionar reservas de forma automatizada
+•	Procesar pagos online
+•	Ofrecer atención al cliente mediante conversación automatizada
+•	Integrar funcionalidades de CRM (gestión de relaciones con clientes)
+3.2. Split-QR
+Módulo complementario que facilita:
+•	División de pagos entre múltiples comensales
+•	Generación de códigos QR únicos para cada transacción
+•	Procesamiento individual de pagos fraccionados
+3.3. Modelo operativo
+Los Servicios se ofrecen bajo modelo SaaS a empresas registradas (en adelante, "Negocios Cliente" o "Cliente"). Los usuarios finales (comensales, clientes de los restaurantes) interactúan con los chatbots y funcionalidades proporcionadas, pero no mantienen relación contractual directa con Fluxo Services ni con PX Corporation.
+Los Servicios se prestan exclusivamente a través de plataformas digitales accesibles mediante conexión a internet, sin distribución de software para instalación local.
+________________________________________
+4. ACCESO Y REGISTRO
+4.1. Capacidad legal
+Para registrarse como Negocio Cliente, es necesario ser persona física mayor de edad con capacidad legal para contratar, o persona jurídica debidamente constituida y representada. El registro implica la declaración expresa de que se cumplen estos requisitos.
+4.2. Proceso de registro
+El acceso a los Servicios requiere completar el proceso de registro proporcionando información veraz, exacta y actualizada, incluyendo:
+•	Denominación social o nombre comercial del negocio
+•	CIF/NIF
+•	Datos de contacto (correo electrónico, teléfono)
+•	Información de facturación
+•	Cualquier otra información requerida para la prestación del servicio
+4.3. Credenciales de acceso
+El Cliente será responsable de mantener la confidencialidad de sus credenciales de acceso (usuario y contraseña). Cualquier uso de la cuenta será responsabilidad del titular registrado. El Cliente debe notificar inmediatamente cualquier uso no autorizado de su cuenta.
+4.4. Verificación
+PX Corporation se reserva el derecho de verificar la identidad y legitimidad de los Clientes registrados, pudiendo solicitar documentación adicional y suspender temporalmente el servicio hasta completar dicha verificación.
+________________________________________
+5. OBLIGACIONES DE USUARIOS Y NEGOCIOS
+5.1. Obligaciones del Negocio Cliente
+Los Clientes se comprometen a:
+a) Uso conforme a derecho: Utilizar los Servicios de conformidad con la legislación vigente, estos Términos y Condiciones, y las buenas prácticas comerciales.
+b) Veracidad de la información: Proporcionar información veraz, completa y actualizada durante el registro y uso de los Servicios.
+c) Cumplimiento normativo: Cumplir con toda la normativa aplicable en materia de protección de datos (RGPD, LOPDGDD), protección al consumidor, comercio electrónico y cualquier otra que resulte aplicable a su actividad.
+d) Información a usuarios finales: Informar adecuadamente a sus propios clientes (usuarios finales) sobre el uso de sistemas automatizados, tratamiento de datos personales y condiciones de servicio aplicables.
+e) Responsabilidad sobre contenidos: Ser responsable exclusivo de los contenidos, mensajes, información y comunicaciones que configure en los Servicios para interactuar con sus clientes.
+f) Seguridad: Implementar medidas de seguridad adecuadas en su organización y mantener la confidencialidad de sus credenciales de acceso.
+5.2. Usos prohibidos
+Queda expresamente prohibido:
+•	Utilizar los Servicios para fines ilícitos, fraudulentos o contrarios a estos Términos
+•	Realizar actividades que vulneren derechos de terceros o de PX Corporation
+•	Intentar acceder a áreas restringidas de los sistemas o interferir con su funcionamiento
+•	Realizar ingeniería inversa, descompilar o desensamblar el software
+•	Utilizar los Servicios para distribuir malware, spam o contenido nocivo
+•	Manipular o alterar el funcionamiento de los Servicios
+•	Ceder, revender o sublicenciar el acceso a los Servicios sin autorización expresa
+•	Utilizar sistemas automatizados para extraer datos (scraping) sin consentimiento
+•	Suplantar la identidad de terceros o proporcionar información falsa
+5.3. Consecuencias del incumplimiento
+El incumplimiento de estas obligaciones podrá dar lugar a la suspensión temporal o definitiva del servicio, sin perjuicio del derecho de PX Corporation a ejercitar las acciones legales que correspondan y a reclamar la indemnización por daños y perjuicios causados.
+________________________________________
+6. RESPONSABILIDADES DE FLUXO SERVICES / PX CORPORATION
+6.1. Prestación del servicio
+PX Corporation se compromete a:
+a) Disponibilidad: Mantener los Servicios operativos y accesibles, si bien no garantiza una disponibilidad ininterrumpida del 100% debido a posibles tareas de mantenimiento, actualizaciones o circunstancias técnicas.
+b) Funcionalidad: Procurar que los Servicios funcionen conforme a las especificaciones descritas y documentadas.
+c) Soporte técnico: Proporcionar asistencia técnica razonable a través de los canales habilitados.
+d) Seguridad: Implementar medidas técnicas y organizativas apropiadas para proteger la seguridad de los sistemas y datos tratados.
+6.2. Mantenimiento y actualizaciones
+PX Corporation podrá realizar:
+•	Mantenimientos programados, notificando previamente cuando sea posible
+•	Actualizaciones y mejoras de los Servicios sin previo aviso
+•	Modificaciones en las funcionalidades para adaptarse a cambios normativos o tecnológicos
+Durante los períodos de mantenimiento programado, los Servicios podrán estar temporalmente no disponibles. PX Corporation procurará realizar estas operaciones en horarios de menor impacto.
+6.3. Relación con usuarios finales
+PX Corporation no mantiene relación contractual directa con los usuarios finales (clientes de los Negocios Cliente). La relación contractual se establece exclusivamente entre:
+•	PX Corporation y el Negocio Cliente
+•	El Negocio Cliente y sus propios clientes (usuarios finales)
+El Negocio Cliente actúa como responsable del tratamiento de datos de sus clientes finales y es responsable de cumplir con todas las obligaciones legales derivadas de dicha relación.
+________________________________________
+7. PROPIEDAD INTELECTUAL E INDUSTRIAL
+7.1. Titularidad
+Todos los derechos de propiedad intelectual e industrial sobre los Servicios, incluyendo pero no limitándose a software, código fuente, diseño, estructura, marcas, logotipos, nombres comerciales, bases de datos, contenidos y documentación, son propiedad exclusiva de PX Corporation o de sus licenciantes.
+Las marcas Fluxo Services, GastroBot y Split-QR son propiedad de PX Corporation y están protegidas por la legislación española y europea sobre marcas y propiedad industrial.
+7.2. Licencia de uso
+PX Corporation otorga al Cliente una licencia de uso no exclusiva, intransferible, limitada y revocable para acceder y utilizar los Servicios conforme a estos Términos, exclusivamente para los fines comerciales legítimos del Cliente.
+Esta licencia no implica cesión alguna de derechos de propiedad intelectual o industrial.
+7.3. Restricciones
+El Cliente no podrá:
+•	Copiar, modificar, adaptar o crear obras derivadas de los Servicios
+•	Realizar ingeniería inversa o intentar extraer el código fuente
+•	Eliminar o alterar avisos de propiedad intelectual o industrial
+•	Utilizar las marcas de PX Corporation sin autorización expresa y por escrito
+•	Comercializar, sublicenciar o distribuir los Servicios a terceros
+7.4. Contenidos del Cliente
+Los contenidos, datos y configuraciones introducidos por el Cliente en los Servicios permanecen bajo su titularidad. El Cliente otorga a PX Corporation una licencia limitada para procesar, almacenar y utilizar dichos contenidos exclusivamente para la prestación de los Servicios contratados.
+7.5. Feedback y sugerencias
+Cualquier comentario, sugerencia o feedback proporcionado por el Cliente sobre los Servicios podrá ser utilizado libremente por PX Corporation sin obligación de compensación o reconocimiento.
+________________________________________
+8. CONDICIONES ECONÓMICAS Y PAGOS
+8.1. Modelo de precios
+Los Servicios se ofrecen mediante modelo de suscripción o pago recurrente según los planes y tarifas publicados en el sitio web de Fluxo Services o comunicados al Cliente durante el proceso de contratación.
+PX Corporation se reserva el derecho a modificar sus tarifas, notificando al Cliente con antelación razonable. Las modificaciones no afectarán a períodos de suscripción ya pagados.
+8.2. Facturación
+La facturación se realizará conforme a la periodicidad contratada (mensual, anual u otra). El Cliente recibirá las facturas correspondientes en formato electrónico a la dirección de correo facilitada.
+Las facturas emitidas cumplirán con los requisitos establecidos en la normativa fiscal española vigente.
+8.3. Medios de pago
+Los pagos se procesarán a través de Stripe, proveedor de servicios de pago certificado PCI DSS. PX Corporation no almacena directamente datos completos de tarjetas de crédito de los Clientes.
+Para la adquisición de licencias de Fluxo Services también se utiliza Gumroad como plataforma de venta autorizada.
+8.4. Pagos automatizados
+En caso de suscripciones recurrentes, el Cliente autoriza el cargo automático en el medio de pago designado en cada período de facturación.
+8.5. Impagos y suspensión
+El impago de las cuotas debidas en plazo podrá conllevar:
+•	Suspensión temporal del acceso a los Servicios tras notificación
+•	Aplicación de intereses de demora conforme a la Ley 3/2004
+•	Resolución del contrato y baja definitiva del servicio
+•	Ejercicio de acciones legales para el cobro de las cantidades adeudadas
+8.6. Comisiones de terceros
+Los Servicios procesan pagos de usuarios finales (clientes de los Negocios Cliente) a través de Stripe. Las comisiones aplicadas por Stripe serán transparentes y se informarán al Cliente. PX Corporation no obtiene beneficio adicional sobre dichas comisiones de procesamiento.
+8.7. Reembolsos
+Las políticas de reembolso, cuando apliquen, se especificarán en las condiciones particulares de cada plan contratado. Con carácter general, los pagos realizados por períodos de servicio ya iniciados no son reembolsables, salvo en casos de incumplimiento grave imputable a PX Corporation.
+________________________________________
+9. LIMITACIÓN DE RESPONSABILIDAD
+9.1. Exclusiones generales
+En la máxima medida permitida por la legislación aplicable, PX Corporation no será responsable de:
+a) Uso inadecuado: Daños derivados del uso indebido, negligente o contrario a estos Términos por parte del Cliente o terceros.
+b) Contenidos de terceros: Contenidos, informaciones o comunicaciones generadas por el Cliente o usuarios finales a través de los Servicios.
+c) Servicios de terceros: Fallos, interrupciones o problemas derivados de servicios de terceros integrados (Supabase, Stripe, Gumroad, proveedores de conectividad, etc.).
+d) Fuerza mayor: Interrupciones causadas por eventos de fuerza mayor, casos fortuitos, ataques cibernéticos, fallos de infraestructura de internet, cortes de suministro eléctrico o cualquier circunstancia ajena al control razonable de PX Corporation.
+e) Decisiones empresariales: Decisiones comerciales adoptadas por el Cliente basándose en información o funcionalidades de los Servicios.
+f) Pérdida de datos: Pérdida de datos cuando el Cliente no haya mantenido copias de seguridad propias, sin perjuicio de las medidas de respaldo implementadas por PX Corporation.
+9.2. Limitación cuantitativa
+En ningún caso la responsabilidad total de PX Corporation, por cualquier concepto y en conjunto, excederá del importe total abonado por el Cliente durante los doce (12) meses inmediatamente anteriores al evento que originó la reclamación.
+9.3. Exclusión de daños indirectos
+PX Corporation no será responsable de daños indirectos, lucro cesante, pérdida de oportunidades de negocio, daño reputacional, pérdida de datos o cualquier otro perjuicio indirecto o consecuencial, aun cuando hubiera sido advertida de su posibilidad.
+9.4. Garantías
+Los Servicios se prestan "tal cual" y "según disponibilidad". Sin perjuicio de las garantías legales imperativas, PX Corporation no garantiza:
+•	Funcionamiento ininterrumpido o libre de errores
+•	Resultados específicos o aumento de ventas para el Cliente
+•	Compatibilidad con todos los dispositivos, navegadores o sistemas operativos
+•	Ausencia total de vulnerabilidades de seguridad
+9.5. Obligación de mitigar daños
+El Cliente se compromete a adoptar medidas razonables para mitigar cualquier daño que pudiera sufrir, incluyendo la notificación inmediata de incidencias a PX Corporation.
+9.6. Indemnización por el Cliente
+El Cliente mantendrá indemne a PX Corporation frente a cualquier reclamación, demanda, pérdida o gasto (incluyendo honorarios legales razonables) derivados de:
+•	Incumplimiento de estos Términos por parte del Cliente
+•	Uso ilícito de los Servicios
+•	Vulneración de derechos de terceros
+•	Incumplimiento de normativa aplicable en relación con usuarios finales
+________________________________________
+10. PROTECCIÓN DE DATOS PERSONALES
+10.1. Responsables del tratamiento
+En el marco de la prestación de los Servicios se producen diferentes tratamientos de datos personales:
+a) PX Corporation como Responsable: Trata datos personales del Negocio Cliente (datos de registro, facturación, contacto) para la gestión de la relación contractual.
+b) Negocio Cliente como Responsable: Es responsable del tratamiento de datos de sus propios clientes (usuarios finales) que interactúan con los chatbots y funcionalidades.
+c) PX Corporation como Encargado del Tratamiento: En relación con los datos de usuarios finales, PX Corporation actúa como encargado del tratamiento por cuenta del Negocio Cliente, limitándose a procesar dichos datos según las instrucciones del Cliente y conforme a la legislación aplicable.
+10.2. Normativa aplicable
+Todos los tratamientos de datos se realizan en cumplimiento de:
+•	Reglamento (UE) 2016/679 (RGPD)
+•	Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD)
+•	Ley 34/2002, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE)
+10.3. Información detallada
+La información completa sobre el tratamiento de datos personales, incluyendo finalidades, legitimación, destinatarios, plazos de conservación, derechos de los interesados y medidas de seguridad, se encuentra disponible en la Política de Privacidad de Fluxo Services, accesible en [enlace a Política de Privacidad].
+Dicha Política de Privacidad forma parte integrante de estos Términos y Condiciones.
+10.4. Obligaciones del Cliente
+El Negocio Cliente se compromete a:
+a) Cumplir con el RGPD y la LOPDGDD en el tratamiento de datos de sus propios clientes.
+b) Informar adecuadamente a los usuarios finales sobre el tratamiento de sus datos, incluyendo la intervención de PX Corporation como encargado del tratamiento.
+c) Obtener las bases de legitimación necesarias (consentimiento, ejecución contractual, etc.) para el tratamiento de datos de usuarios finales.
+d) Facilitar el ejercicio de derechos (acceso, rectificación, supresión, etc.) de los usuarios finales, coordinándose con PX Corporation cuando sea necesario.
+e) No tratar categorías especiales de datos (datos sensibles) a través de los Servicios sin autorización expresa de PX Corporation y sin implementar las garantías legales exigibles.
+f) Notificar a PX Corporation cualquier brecha de seguridad que afecte a datos tratados en el marco de los Servicios.
+10.5. Servicios de terceros
+PX Corporation utiliza los siguientes subencargados del tratamiento:
+•	Supabase: Almacenamiento y gestión de bases de datos
+•	Stripe: Procesamiento de pagos
+•	Gumroad: Venta de licencias
+Estos proveedores cumplen con el RGPD y mantienen medidas de seguridad adecuadas. El Cliente autoriza expresamente la subcontratación de estos servicios.
+10.6. Transferencias internacionales
+En caso de que los servicios de terceros impliquen transferencias internacionales de datos fuera del Espacio Económico Europeo, PX Corporation garantiza que dichas transferencias se realizan con las garantías adecuadas previstas en el RGPD (cláusulas contractuales tipo, decisiones de adecuación, etc.).
+10.7. Conservación de datos
+Los datos se conservarán durante el tiempo necesario para cumplir con las finalidades del tratamiento y, posteriormente, durante los plazos legales de prescripción aplicables (generalmente 6 años en materia contractual y fiscal).
+Tras la finalización del contrato, PX Corporation procederá a la supresión o devolución de los datos del Cliente conforme a lo acordado, salvo obligación legal de conservación.
+________________________________________
+11. MODIFICACIONES DE LOS TÉRMINOS
+11.1. Derecho de modificación
+PX Corporation se reserva el derecho a modificar estos Términos y Condiciones en cualquier momento, con el fin de adaptarlos a:
+•	Cambios legislativos o regulatorios
+•	Evolución tecnológica de los Servicios
+•	Nuevas funcionalidades o características
+•	Mejoras en la seguridad o privacidad
+•	Decisiones organizativas o comerciales
+11.2. Notificación
+Las modificaciones se notificarán a los Clientes con una antelación mínima de treinta (30) días naturales a su entrada en vigor, mediante:
+•	Publicación en el sitio web de Fluxo Services
+•	Comunicación al correo electrónico registrado del Cliente
+•	Notificación en el panel de usuario del Servicio
+En caso de modificaciones sustanciales que afecten de manera significativa a los derechos u obligaciones del Cliente, el plazo de notificación será de sesenta (60) días naturales.
+11.3. Aceptación o derecho de resolución
+El uso continuado de los Servicios tras la entrada en vigor de las modificaciones constituye la aceptación de los nuevos Términos.
+Si el Cliente no estuviera de acuerdo con las modificaciones, podrá resolver el contrato comunicándolo por escrito antes de la fecha de entrada en vigor, sin penalización alguna. En tal caso:
+•	Se procederá al cese del servicio
+•	No se devolverán importes correspondientes al período en curso ya iniciado
+•	Se facilitará la exportación de datos del Cliente cuando sea técnicamente posible
+11.4. Versión vigente
+La versión vigente de los Términos y Condiciones será siempre la publicada en el sitio web de Fluxo Services, donde constará la fecha de última actualización.
+Se recomienda a los Clientes revisar periódicamente estos Términos para estar informados de cualquier cambio.
+________________________________________
+12. DURACIÓN Y RESOLUCIÓN DEL CONTRATO
+12.1. Duración
+El contrato tendrá la duración del período de suscripción contratado (mensual, anual u otro) y se renovará automáticamente por períodos equivalentes, salvo manifestación en contrario de cualquiera de las partes.
+12.2. Resolución por el Cliente
+El Cliente podrá resolver el contrato en cualquier momento mediante notificación escrita a través de los canales habilitados, con los siguientes efectos:
+a) Resolución anticipada: Si el Cliente resuelve antes de finalizar el período de suscripción pagado, no tendrá derecho a reembolso proporcional, salvo incumplimiento grave imputable a PX Corporation.
+b) No renovación: Si el Cliente desea no renovar al finalizar el período en curso, deberá comunicarlo con al menos siete (7) días de antelación a la fecha de renovación.
+c) Baja efectiva: El servicio permanecerá activo hasta la finalización del período pagado.
+12.3. Resolución por PX Corporation
+PX Corporation podrá resolver el contrato de forma inmediata en los siguientes supuestos:
+a) Incumplimiento grave: Incumplimiento grave o reiterado de estos Términos por parte del Cliente.
+b) Uso ilícito: Utilización de los Servicios para fines ilícitos o fraudulentos.
+c) Impago: Falta de pago de las cantidades adeudadas tras requerimiento.
+d) Riesgo para el sistema: Conductas que pongan en riesgo la seguridad, estabilidad o integridad de los Servicios.
+e) Cesación del servicio: Decisión empresarial de cesar la prestación de los Servicios, notificando con al menos noventa (90) días de antelación.
+12.4. Efectos de la resolución
+Tras la resolución del contrato:
+a) Acceso: El Cliente perderá el acceso inmediato a los Servicios.
+b) Datos: PX Corporation facilitará la exportación de datos del Cliente durante un plazo razonable (no inferior a 30 días) tras la resolución, siempre que no exista incumplimiento grave por parte del Cliente.
+c) Supresión: Transcurrido el plazo de exportación, PX Corporation procederá a la supresión de los datos conforme a su política de retención, salvo obligación legal de conservación.
+d) Obligaciones pendientes: La resolución no exime del cumplimiento de obligaciones pendientes (pagos adeudados, responsabilidades por incumplimientos previos, etc.).
+________________________________________
+13. LEGISLACIÓN APLICABLE Y JURISDICCIÓN
+13.1. Legislación aplicable
+Estos Términos y Condiciones se rigen por la legislación española, en particular:
+•	Código Civil español
+•	Ley 7/1998, sobre Condiciones Generales de la Contratación
+•	Ley 34/2002, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE)
+•	Reglamento (UE) 2016/679 (RGPD) y Ley Orgánica 3/2018 (LOPDGDD)
+•	Real Decreto Legislativo 1/2007, de defensa de consumidores y usuarios (cuando aplique)
+•	Cualquier otra normativa española o europea que resulte aplicable
+13.2. Resolución de conflictos
+Para Clientes que sean consumidores (personas físicas que actúen fuera de su actividad comercial o profesional):
+Conforme a la normativa de consumo, podrá acudir a los sistemas de resolución alternativa de conflictos:
+•	Plataforma europea de resolución de litigios en línea: https://ec.europa.eu/consumers/odr
+•	Juntas Arbitrales de Consumo u otros órganos de mediación oficiales
+Para Clientes empresas o profesionales:
+En caso de controversia, las partes se comprometen a intentar una solución amistosa de buena fe. Si no fuera posible, se someterán a mediación antes de acudir a la vía judicial.
+13.3. Jurisdicción
+Con renuncia expresa a cualquier otro fuero que pudiera corresponder, las partes se someten a la jurisdicción de los Juzgados y Tribunales de [Ciudad, España], salvo que la ley establezca imperativamente otra jurisdicción.
+Para Clientes consumidores, será aplicable el fuero del domicilio del consumidor cuando la normativa así lo establezca.
+________________________________________
+14. DISPOSICIONES GENERALES
+14.1. Integridad del acuerdo
+Estos Términos y Condiciones, junto con la Política de Privacidad y cualquier condición particular aplicable al plan contratado, constituyen el acuerdo completo entre las partes, sustituyendo cualquier acuerdo previo oral o escrito.
+14.2. Nulidad parcial
+Si cualquier disposición de estos Términos fuera declarada nula o inaplicable por resolución judicial o administrativa, dicha nulidad no afectará a la validez del resto de disposiciones, que permanecerán en pleno vigor.
+14.3. Renuncia
+La falta de ejercicio o el retraso en el ejercicio de cualquier derecho por parte de PX Corporation no constituirá renuncia al mismo, salvo manifestación expresa y por escrito.
+14.4. Cesión
+El Cliente no podrá ceder, transferir o sublicenciar sus derechos u obligaciones derivados de estos Términos sin consentimiento previo y por escrito de PX Corporation.
+PX Corporation podrá ceder el contrato a cualquier entidad de su grupo empresarial o a terceros en caso de operaciones de reestructuración, fusión o adquisición, notificándolo al Cliente.
+14.5. Notificaciones
+Todas las notificaciones relevantes entre las partes se realizarán mediante:
+•	Correo electrónico a las direcciones registradas
+•	Notificación en el panel de usuario del Servicio
+•	Comunicación certificada al domicilio social (cuando sea legalmente necesario)
+El Cliente es responsable de mantener actualizada su dirección de correo electrónico de contacto.
+14.6. Idioma
+Estos Términos y Condiciones están redactados en español. En caso de traducción a otros idiomas, prevalecerá siempre la versión en español ante cualquier discrepancia interpretativa.
+14.7. Títulos
+Los títulos de las secciones se incluyen únicamente por comodidad y no afectan a la interpretación de las disposiciones.
+________________________________________
+15. CONTACTO Y ATENCIÓN AL CLIENTE
+Para cualquier consulta, solicitud, reclamación o ejercicio de derechos relacionados con estos Términos y Condiciones, puede contactar con PX Corporation - Fluxo Services a través de:
+Correo electrónico: [correo de soporte/legal]
+Sitio web: [URL del sitio web]
+Domicilio social: [Dirección completa]
+PX Corporation se compromete a responder a las consultas en un plazo razonable, generalmente no superior a diez (10) días hábiles.
+________________________________________
+16. ACEPTACIÓN Y CONSTANCIA
+El acceso y uso de los Servicios de Fluxo Services implica que el Cliente:
+✓ Ha leído íntegramente estos Términos y Condiciones
+✓ Los comprende y acepta sin reservas
+✓ Tiene capacidad legal suficiente para obligarse
+✓ Acepta quedar vinculado por todas las disposiciones aquí establecidas
+La aceptación se manifiesta mediante:
+•	Marcación de la casilla de aceptación durante el registro
+•	Uso continuado de los Servicios tras su puesta a disposición
+•	Cualquier otra acción que inequívocamente manifieste el consentimiento
+________________________________________
+Última actualización: 9 de octubre de 2025
+© 2025 PX Corporation. Todos los derechos reservados.
+Fluxo Services, GastroBot y Split-QR son marcas comerciales de PX Corporation.
+________________________________________
+Este documento ha sido elaborado para uso exclusivo de PX Corporation / Fluxo Services. Se recomienda su revisión por asesor legal antes de su publicación definitiva y completar los datos pendientes señalados [entre corchetes].
