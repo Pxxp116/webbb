@@ -1,23 +1,32 @@
 import { MessageCircle, Mail, Phone } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FooterLegal from "./FooterLegal";
 
 const Footer = () => {
   const [open, setOpen] = useState(false);
   const [tab, setTab] = useState<"privacy" | "terms">("privacy");
-  const [content, setContent] = useState<string>("");
+  const [content, setContent] = useState<string>("Cargando documento...");
 
   async function openLegal(which: "privacy" | "terms") {
     setTab(which);
     setOpen(true);
-    const url = which === "privacy" ? "/legal/privacidad.txt" : "/legal/terminos.txt";
+    setContent("Cargando documento...");
+
+    // ✅ Importante: asegúrate de que el path coincide con la carpeta en public/legal
+    const url =
+      which === "privacy"
+        ? `${import.meta.env.BASE_URL}legal/privacidad.txt`
+        : `${import.meta.env.BASE_URL}legal/terminos.txt`;
+
     try {
-      const res = await fetch(url);
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`Error HTTP ${res.status}`);
       const txt = await res.text();
-      setContent(txt); // ← Texto literal del Word
-    } catch {
+      setContent(txt.trim() || "El documento está vacío o no se pudo leer.");
+    } catch (err) {
+      console.error("❌ Error al cargar documento legal:", err);
       setContent(
-        "No se pudo cargar el documento legal. Comprueba que existan /public/legal/privacidad.txt y /public/legal/terminos.txt"
+        "⚠️ No se pudo cargar el documento legal. Verifica que existan en /public/legal/privacidad.txt y /public/legal/terminos.txt"
       );
     }
   }
@@ -34,7 +43,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Services */}
+          {/* Productos */}
           <div>
             <h4 className="font-semibold mb-4">Productos</h4>
             <ul className="space-y-2 text-primary-foreground/80">
@@ -49,7 +58,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contacto */}
           <div>
             <h4 className="font-semibold mb-4">Contacto</h4>
             <ul className="space-y-2 text-primary-foreground/80">
@@ -69,36 +78,30 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Línea inferior */}
         <div className="mt-12 border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <p className="text-sm text-primary-foreground/60">© 2025 Fluxo. Todos los derechos reservados.</p>
+          <p className="text-sm text-primary-foreground/60">
+            © 2025 Fluxo. Todos los derechos reservados.
+          </p>
 
-          {/* ✅ Misma UI; ahora abren el panel legal */}
           <div className="flex gap-6 text-sm text-primary-foreground/60">
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                openLegal("privacy");
-              }}
-              className="hover:text-primary-foreground transition-colors"
+            <button
+              onClick={() => openLegal("privacy")}
+              className="hover:text-primary-foreground transition-colors underline underline-offset-4"
             >
               Política de Privacidad
-            </a>
-            <a
-              href="#"
-              onClick={(e) => {
-                e.preventDefault();
-                openLegal("terms");
-              }}
-              className="hover:text-primary-foreground transition-colors"
+            </button>
+            <button
+              onClick={() => openLegal("terms")}
+              className="hover:text-primary-foreground transition-colors underline underline-offset-4"
             >
               Términos de Servicio
-            </a>
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Panel legal (sin duplicar footer) */}
+      {/* ✅ Modal legal */}
       <FooterLegal
         open={open}
         onClose={() => setOpen(false)}
