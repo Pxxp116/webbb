@@ -17,7 +17,7 @@ const HeroSection = () => {
               Fluxo. Tu negocio, sin pausas.
             </p>
             <p className="text-lg text-muted-foreground mb-12 max-w-xl">
-              Diseñamos, desarrollamos e implementamos herramientas y softwares optimización que ayudarán a tu negocio a trabajar de forma más inteligente.
+              Diseñamos, desarrollamos e implementamos herramientas y softwares de optimización de tareas que ayudarán a tu negocio a trabajar de forma más eficiente e inteligente.
             </p>
             
             {/* CTA Buttons */}
