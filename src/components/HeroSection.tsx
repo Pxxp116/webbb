@@ -12,12 +12,12 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-hero text-primary mb-6">Automatización inteligente para negocios.</h1>
+            <h1 className="text-hero text-primary mb-6">Software inteligente para negocios.</h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium">
               Fluxo. Tu negocio, sin pausas.
             </p>
             <p className="text-lg text-muted-foreground mb-12 max-w-xl">
-              Diseñamos, desarrollamos e implementamos herramientas y sistemas de automatización y optimización que ayudarán a tu negocio a trabajar de forma más inteligente.
+              Diseñamos, desarrollamos e implementamos herramientas y softwares optimización que ayudarán a tu negocio a trabajar de forma más inteligente.
             </p>
             
             {/* CTA Buttons */}

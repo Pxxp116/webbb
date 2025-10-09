@@ -115,18 +115,21 @@ export default function Navbar() {
       className={
         "fixed top-0 inset-x-0 z-50 bg-white/90 md:backdrop-blur border-b border-border transform-gpu [will-change:transform] " +
         "pt-[var(--sat)] md:!pt-0 " +
-        (scrolled ? "md:py-2 md:shadow-sm" : "md:py-4")
+        // 💡 Recuperamos el efecto de retracción al hacer scroll
+        (scrolled
+          ? "md:py-1.5 py-1 md:h-[64px] h-[56px] md:shadow-sm"
+          : "md:py-3 py-2 md:h-[80px] h-[64px]")
       }
     >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[64px] md:h-[80px]">
-        {/* ✅ Logo ocupa toda la altura de la navbar */}
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-full transition-all duration-300">
+        {/* ✅ Logo ocupa toda la altura de la navbar y se retrae suavemente */}
         <a href="#hero" className="flex items-center h-full">
           <img
             src="/logo-fluxo.png"
             alt="Fluxo"
             className={
               "h-full w-auto object-contain transition-all duration-300 " +
-              (scrolled ? "opacity-95" : "opacity-100")
+              (scrolled ? "scale-90 opacity-95" : "scale-100 opacity-100")
             }
           />
         </a>
