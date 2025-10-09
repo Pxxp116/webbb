@@ -9,6 +9,7 @@ import Automatizacion from "./components/AutomationSection";
 import Beneficios from "./components/BenefitsSection";
 import Planes from "./components/PlansSection";
 import FAQ from "./components/FAQSection";
+import FooterLegal from "./components/FooterLegal"; // ✅ nuevo componente
 
 function App() {
   return (
@@ -24,15 +25,15 @@ function App() {
             <Productos />
           </section>
 
-{/* 🧾 Nueva sección: SplitQR */}
-<section id="splitqr">
-  <SplitQRSection />
-</section>
+          {/* 🧾 Nueva sección: SplitQR */}
+          <section id="splitqr">
+            <SplitQRSection />
+          </section>
 
-{/* 🤖 Nueva sección: GastroBot */}
-<section id="gastrobot">
-  <GastroBotSection />
-</section>
+          {/* 🤖 Nueva sección: GastroBot */}
+          <section id="gastrobot">
+            <GastroBotSection />
+          </section>
 
           {/* 👇 Solo una vez esta sección */}
           <section id="automatizacion">
@@ -52,6 +53,7 @@ function App() {
           </section>
         </main>
         <Footer />
+        <FooterLegal /> {/* ✅ añadimos la pestaña legal al final */}
       </div>
     </Router>
   );
