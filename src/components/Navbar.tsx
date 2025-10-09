@@ -118,15 +118,15 @@ export default function Navbar() {
         (scrolled ? "md:py-2 md:shadow-sm" : "md:py-4")
       }
     >
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[48px] md:h-auto">
-        {/* ✅ Solo el nuevo logo desde /public */}
-        <a href="#hero" className="flex items-center">
+      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[64px] md:h-[80px]">
+        {/* ✅ Logo ocupa toda la altura de la navbar */}
+        <a href="#hero" className="flex items-center h-full">
           <img
             src="/logo-fluxo.png"
             alt="Fluxo"
             className={
-              "transition-all duration-300 object-contain " +
-              (scrolled ? "md:h-10 h-8" : "md:h-12 h-9")
+              "h-full w-auto object-contain transition-all duration-300 " +
+              (scrolled ? "opacity-95" : "opacity-100")
             }
           />
         </a>
