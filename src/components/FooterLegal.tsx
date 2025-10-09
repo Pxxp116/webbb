@@ -30,7 +30,7 @@ export default function FooterLegal({
     >
       <button
         onClick={onClose}
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        className="absolute inset-0 bg-white/50 backdrop-blur-sm"
         aria-label="Cerrar"
       />
       <div className="relative bg-white w-full sm:max-w-4xl max-h-[85vh] overflow-y-auto rounded-t-2xl sm:rounded-2xl shadow-lg">
