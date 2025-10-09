@@ -8,7 +8,7 @@ const Footer = () => {
 
   // 🔵 Texto literal de tu documento (resumido aquí, pero puedes pegarlo entero)
   const PRIVACY_TEXT = `
-  [1. IDENTIFICACIÓN DEL RESPONSABLE DEL TRATAMIENTO
+1. IDENTIFICACIÓN DEL RESPONSABLE DEL TRATAMIENTO
 En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (en adelante, "RGPD"), y de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (en adelante, "LOPDGDD"), se informa de lo siguiente:
 Responsable del tratamiento:
 PX Corporation
@@ -189,11 +189,10 @@ ________________________________________
 Fecha de última actualización: 9 de octubre de 2025
 Fluxo Services
 Automatización inteligente para tu negocio
-]
   `;
 
   const TERMS_TEXT = `
-  [TÉRMINOS Y CONDICIONES DE USO
+TÉRMINOS Y CONDICIONES DE USO
 Fluxo Services (marca comercial de PX Corporation)
 Última actualización: 9 de octubre de 2025
 ________________________________________
@@ -499,7 +498,6 @@ ________________________________________
 © 2025 PX Corporation. Todos los derechos reservados.
 Fluxo Services, GastroBot y Split-QR son marcas comerciales de PX Corporation.
 ________________________________________
-]
   `;
 
   return (
