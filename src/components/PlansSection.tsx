@@ -28,6 +28,7 @@ type Plan = {
   };
   subtitle?: string;
   features: string[];
+  visuals: { icon: IconType; title: string; desc: string }[];
   popular?: boolean;
 };
 
@@ -48,6 +49,14 @@ const plans: Plan[] = [
       "Pagos divididos automáticos por QR",
       "Panel de transacciones básico",
       "Soporte por correo",
+      "Sin permanencia",
+    ],
+    visuals: [
+      {
+        icon: QrCode,
+        title: "SplitQR",
+        desc: "División automática de cuentas mediante código QR",
+      },
     ],
   },
   {
@@ -68,6 +77,17 @@ const plans: Plan[] = [
       "FAQ, horarios y contacto",
       "Branding básico",
       "Panel de control esencial",
+      "Reservas automáticas",
+      "Dashboard completo con estadísticas",
+      "Soporte y actualizaciones",
+      "Sin permanencia",
+    ],
+    visuals: [
+      {
+        icon: MessageCircle,
+        title: "Chatbot con Dashboard",
+        desc: "Asistente virtual completo con panel de control para atención al cliente",
+      },
     ],
   },
   {
@@ -86,17 +106,39 @@ const plans: Plan[] = [
     },
     subtitle: "GastroBot con reservas + Split QR integrado",
     features: [
-      "Reservas automáticas y recordatorios",
-      "Dashboard completo con estadísticas",
-      "Split QR integrado",
-      "Soporte prioritario y actualizaciones",
+      "Configuración personalizada",
+      "Integración con Chatbot",
+      "Respuestas automáticas inteligentes",
+      "Gestión de reservas y citas",
+      "SplitQR para dividir cuentas",
+      "Análisis y reportes",
+      "Soporte técnico incluido",
+      "Actualizaciones mensuales",
+      "Sin permanencia",
+    ],
+    visuals: [
+      {
+        icon: MessageCircle,
+        title: "Chatbot con Dashboard",
+        desc: "Asistente virtual completo con panel de control para atención al cliente",
+      },
+      {
+        icon: LayoutDashboard,
+        title: "Panel de Control",
+        desc: "Dashboard integral para gestionar tu negocio en tiempo real",
+      },
+      {
+        icon: QrCode,
+        title: "SplitQR",
+        desc: "División automática de cuentas mediante código QR integrado",
+      },
     ],
     popular: true,
   },
 ];
 
 export default function PlansSection() {
-  const [isAnnual, setIsAnnual] = useState(false);
+  const [isAnnual, setIsAnnual] = useState(true);
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
@@ -117,36 +159,6 @@ export default function PlansSection() {
           Tecnología premium, experiencia fluida y soporte cercano. Elige el
           plan que mejor encaje contigo.
         </p>
-
-        {/* SWITCH mensual / anual */}
-        <div className="mt-8 flex items-center justify-center gap-3">
-          <span
-            className={`text-sm font-medium ${
-              !isAnnual ? "text-[#0b2545]" : "text-gray-400"
-            }`}
-          >
-            Mensual
-          </span>
-          <button
-            onClick={() => setIsAnnual((prev) => !prev)}
-            className={`relative inline-flex h-6 w-12 items-center rounded-full transition ${
-              isAnnual ? "bg-[#ff7a00]" : "bg-gray-300"
-            }`}
-          >
-            <span
-              className={`inline-block h-5 w-5 transform rounded-full bg-white transition ${
-                isAnnual ? "translate-x-6" : "translate-x-1"
-              }`}
-            />
-          </button>
-          <span
-            className={`text-sm font-medium ${
-              isAnnual ? "text-[#0b2545]" : "text-gray-400"
-            }`}
-          >
-            Anual
-          </span>
-        </div>
       </div>
 
       <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
@@ -184,31 +196,76 @@ export default function PlansSection() {
                 </h3>
               </div>
 
+              {/* Bloques visuales por plan */}
+              <div className="mt-6 space-y-4">
+                {plan.visuals.map((v, i) => {
+                  const VIcon = v.icon;
+                  return (
+                    <div
+                      key={i}
+                      className="flex flex-col items-center text-center"
+                    >
+                      <VIcon className="w-8 h-8 text-[#ff7a00] mb-2" />
+                      <p className="font-semibold text-[#0b2545]">{v.title}</p>
+                      <p className="text-sm text-[#6b7a90] max-w-[240px]">
+                        {v.desc}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Switch dentro de la tarjeta */}
+              <div className="mt-6 flex items-center justify-center gap-3">
+                <span
+                  className={`text-sm font-medium ${
+                    !isAnnual ? "text-[#0b2545]" : "text-gray-400"
+                  }`}
+                >
+                  Mensual
+                </span>
+                <button
+                  onClick={() => setIsAnnual((prev) => !prev)}
+                  className={`relative inline-flex h-6 w-12 items-center rounded-full transition ${
+                    isAnnual ? "bg-[#ff7a00]" : "bg-gray-300"
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-5 w-5 transform rounded-full bg-white transition ${
+                      isAnnual ? "translate-x-6" : "translate-x-1"
+                    }`}
+                  />
+                </button>
+                <span
+                  className={`text-sm font-medium ${
+                    isAnnual ? "text-[#0b2545]" : "text-gray-400"
+                  }`}
+                >
+                  Anual
+                </span>
+              </div>
+
+              {/* Precio */}
               <div className="flex flex-col items-center mt-4">
-                <div className="flex items-center gap-1">
-                  <span className="text-[36px] font-extrabold text-[#ff7a00] leading-none text-center">
-                    {pricing.price}
-                  </span>
-                </div>
+                <span className="text-[36px] font-extrabold text-[#ff7a00] leading-none text-center">
+                  {pricing.price}
+                </span>
 
                 {pricing.activation && (
                   <p className="text-sm mt-2 font-medium text-[#0b2545]">
                     {pricing.activation}
                   </p>
                 )}
-
                 {pricing.commission && (
                   <p className="text-sm mt-1 text-[#0b2545]">
                     {pricing.commission}
                   </p>
                 )}
-
                 {pricing.total && (
                   <p className="text-xs mt-1 text-gray-500">
                     Total anual: {pricing.total}
                   </p>
                 )}
-
                 {plan.subtitle && (
                   <p className="mt-3 text-sm text-[#6b7a90] text-center max-w-[240px]">
                     {plan.subtitle}
@@ -216,6 +273,7 @@ export default function PlansSection() {
                 )}
               </div>
 
+              {/* Features */}
               <ul className="mt-6 space-y-3 text-left text-[#0b2545]">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-start gap-2 text-sm">
@@ -247,7 +305,6 @@ export default function PlansSection() {
         })}
       </div>
 
-      {/* Luz ambiental sutil */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,122,0,0.04)_0%,transparent_70%)] blur-3xl" />
     </section>
   );
