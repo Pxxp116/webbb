@@ -7,86 +7,96 @@ import {
   LayoutDashboard,
   QrCode,
   CheckCircle2,
-  Info,
 } from "lucide-react";
 import PlanCheckoutDialog from "./PlanCheckoutDialog";
 
-// ---- Tipos TS seguros (evita errores en deploy) ----
 type IconType = React.ComponentType<SVGProps<SVGSVGElement>>;
 
 type Plan = {
-  name: "Split QR" | "Basic" | "Profesional" | string;
-  price: string;
-  period: string;
-  subtitle?: string | null;
-  activation?: string | null;
-  commission?: string | null;
-  annual?: { short: string; full: string } | null;
-  features: string[];
+  name: string;
   icon: IconType;
-  button: string;
+  monthly: {
+    price: string;
+    activation?: string;
+    commission?: string;
+  };
+  annual: {
+    price: string;
+    activation?: string;
+    total?: string;
+    commission?: string;
+  };
+  subtitle?: string;
+  features: string[];
   popular?: boolean;
 };
 
 const plans: Plan[] = [
   {
     name: "Split QR",
-    price: "14,99 €",
-    period: "/mes",
-    subtitle: "Precio sin IVA",
-    activation: null,
-    commission: "1 % por transacción",
-    annual: {
-      short: "Anual: 9,99 €/mes",
-      full: "Pagando anual: 9,99 €/mes (119,88 €/año, sin IVA).",
+    icon: QrCode,
+    monthly: {
+      price: "14,99 € + IVA / mes",
+      commission: "1 % por transacción",
     },
+    annual: {
+      price: "9,99 € + IVA / mes",
+      commission: "1 % por transacción",
+    },
+    subtitle: "Ideal para cafeterías, bares y panaderías",
     features: [
       "Pagos divididos automáticos por QR",
-      "Panel básico de transacciones",
+      "Panel de transacciones básico",
       "Soporte por correo",
-      "Ideal para cafeterías y panaderías",
     ],
-    icon: QrCode,
-    button: "Empezar con Split QR",
   },
   {
     name: "Basic",
-    price: "65,20 €",
-    period: "/mes",
-    subtitle: "IVA incluido",
-    activation: "Activación única: 199 € (IVA incl.)",
-    commission: null,
-    annual: null,
+    icon: MessageCircle,
+    monthly: {
+      price: "79 € / mes (IVA incl.)",
+      activation: "Activación: 199 € (IVA incl.)",
+    },
+    annual: {
+      price: "65,20 € / mes (IVA incl.)",
+      activation: "Activación: 189 € (IVA incl.)",
+      total: "971,40 € / año",
+    },
+    subtitle: "Chatbot informativo (sin reservas)",
     features: [
-      "Chatbot informativo (sin reservas)",
+      "ChatBot informativo 24/7",
       "FAQ, horarios y contacto",
       "Branding básico",
       "Panel de control esencial",
     ],
-    icon: MessageCircle,
-    button: "Empezar con Basic",
   },
   {
     name: "Profesional",
-    price: "77,50 €",
-    period: "/mes",
-    subtitle: "IVA incluido",
-    activation: "Activación única: 249 € (IVA incl.)",
-    commission: "0,3 % por transacción",
-    annual: null,
+    icon: LayoutDashboard,
+    monthly: {
+      price: "99 € / mes (IVA incl.)",
+      activation: "Activación: 249 € (IVA incl.)",
+      commission: "0,3 % por transacción",
+    },
+    annual: {
+      price: "77,50 € / mes (IVA incl.)",
+      activation: "Activación: 220 € (IVA incl.)",
+      total: "1.150 € / año",
+      commission: "0,3 % por transacción",
+    },
+    subtitle: "GastroBot con reservas + Split QR integrado",
     features: [
       "Reservas automáticas y recordatorios",
       "Dashboard completo con estadísticas",
       "Split QR integrado",
       "Soporte prioritario y actualizaciones",
     ],
-    icon: LayoutDashboard,
-    button: "Empezar con Profesional",
     popular: true,
   },
 ];
 
 export default function PlansSection() {
+  const [isAnnual, setIsAnnual] = useState(false);
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
@@ -98,7 +108,6 @@ export default function PlansSection() {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="text-4xl font-extrabold text-[#0b2545]"
         >
@@ -108,11 +117,43 @@ export default function PlansSection() {
           Tecnología premium, experiencia fluida y soporte cercano. Elige el
           plan que mejor encaje contigo.
         </p>
+
+        {/* SWITCH mensual / anual */}
+        <div className="mt-8 flex items-center justify-center gap-3">
+          <span
+            className={`text-sm font-medium ${
+              !isAnnual ? "text-[#0b2545]" : "text-gray-400"
+            }`}
+          >
+            Mensual
+          </span>
+          <button
+            onClick={() => setIsAnnual((prev) => !prev)}
+            className={`relative inline-flex h-6 w-12 items-center rounded-full transition ${
+              isAnnual ? "bg-[#ff7a00]" : "bg-gray-300"
+            }`}
+          >
+            <span
+              className={`inline-block h-5 w-5 transform rounded-full bg-white transition ${
+                isAnnual ? "translate-x-6" : "translate-x-1"
+              }`}
+            />
+          </button>
+          <span
+            className={`text-sm font-medium ${
+              isAnnual ? "text-[#0b2545]" : "text-gray-400"
+            }`}
+          >
+            Anual
+          </span>
+        </div>
       </div>
 
       <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
         {plans.map((plan, idx) => {
-          const Icon = plan.icon; // <- TS-safe
+          const Icon = plan.icon;
+          const pricing = isAnnual ? plan.annual : plan.monthly;
+
           return (
             <motion.div
               key={plan.name}
@@ -120,8 +161,8 @@ export default function PlansSection() {
               onMouseLeave={() => setHovered(null)}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.6 }}
+              viewport={{ once: true }}
               className={`relative flex flex-col border rounded-[26px] p-8 bg-white transition-all duration-500 cursor-pointer ${
                 hovered === plan.name ? "shadow-2xl scale-[1.03]" : "shadow-sm"
               } ${
@@ -144,43 +185,33 @@ export default function PlansSection() {
               </div>
 
               <div className="flex flex-col items-center mt-4">
-                <div className="flex items-end gap-1">
-                  <span className="text-[48px] font-extrabold text-[#ff7a00] leading-none">
-                    {plan.price}
-                  </span>
-                  <span className="text-lg text-[#6b7a90] mb-2">
-                    {plan.period}
+                <div className="flex items-center gap-1">
+                  <span className="text-[36px] font-extrabold text-[#ff7a00] leading-none text-center">
+                    {pricing.price}
                   </span>
                 </div>
 
-                {plan.subtitle && (
-                  <p className="text-sm text-[#6b7a90]">{plan.subtitle}</p>
-                )}
-
-                {/* Tooltip interactivo anual */}
-                {plan.annual && (
-                  <div className="mt-3 relative flex items-center gap-2 text-sm text-[#6b7a90]">
-                    <span className="bg-gray-100 rounded px-2 py-1">
-                      {plan.annual.short}
-                    </span>
-                    <div className="group relative flex">
-                      <Info className="w-4 h-4 text-gray-400 group-hover:text-[#ff7a00] transition" />
-                      <span className="absolute top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition bg-white border border-gray-200 rounded-lg shadow-md px-3 py-2 text-xs text-gray-700 w-56 z-10">
-                        {plan.annual.full}
-                      </span>
-                    </div>
-                  </div>
-                )}
-
-                {plan.activation && (
-                  <p className="mt-2 text-sm font-medium text-[#0b2545]">
-                    {plan.activation}
+                {pricing.activation && (
+                  <p className="text-sm mt-2 font-medium text-[#0b2545]">
+                    {pricing.activation}
                   </p>
                 )}
 
-                {plan.commission && (
-                  <p className="mt-1 text-sm text-[#0b2545]">
-                    {plan.commission}
+                {pricing.commission && (
+                  <p className="text-sm mt-1 text-[#0b2545]">
+                    {pricing.commission}
+                  </p>
+                )}
+
+                {pricing.total && (
+                  <p className="text-xs mt-1 text-gray-500">
+                    Total anual: {pricing.total}
+                  </p>
+                )}
+
+                {plan.subtitle && (
+                  <p className="mt-3 text-sm text-[#6b7a90] text-center max-w-[240px]">
+                    {plan.subtitle}
                   </p>
                 )}
               </div>
@@ -205,7 +236,9 @@ export default function PlansSection() {
                         : "bg-[#0b2545] text-white hover:bg-[#081a33]"
                     }`}
                   >
-                    {plan.button}
+                    {isAnnual
+                      ? `Elegir plan anual`
+                      : `Elegir plan mensual`}
                   </motion.button>
                 </PlanCheckoutDialog>
               </div>
@@ -214,7 +247,7 @@ export default function PlansSection() {
         })}
       </div>
 
-      {/* Luz ambiental contenida en la sección (evita overlays globales en SSR) */}
+      {/* Luz ambiental sutil */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,122,0,0.04)_0%,transparent_70%)] blur-3xl" />
     </section>
   );
