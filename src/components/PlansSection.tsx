@@ -8,7 +8,6 @@ import {
   QrCode,
   CheckCircle2,
 } from "lucide-react";
-import PlanCheckoutDialog from "./PlanCheckoutDialog";
 
 type IconType = React.ComponentType<SVGProps<SVGSVGElement>>;
 
@@ -139,6 +138,10 @@ const plans: Plan[] = [
 export default function PlansSection() {
   const [isAnnual, setIsAnnual] = useState(true);
   const [hovered, setHovered] = useState<string | null>(null);
+
+  const handleRedirect = () => {
+    window.location.href = "https://fluxogastrobot.com";
+  };
 
   return (
     <section
@@ -282,19 +285,16 @@ export default function PlansSection() {
                 ))}
               </ul>
 
-              {/* Botón naranja */}
+              {/* Botón naranja con redirección */}
               <div className="mt-8">
-                <PlanCheckoutDialog planName={plan.name}>
-                  <motion.button
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full rounded-xl px-5 py-3 font-semibold bg-[#ff7a00] text-white hover:bg-[#e96e00] transition"
-                  >
-                    {isAnnual
-                      ? `Elegir plan anual`
-                      : `Elegir plan mensual`}
-                  </motion.button>
-                </PlanCheckoutDialog>
+                <motion.button
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={handleRedirect}
+                  className="w-full rounded-xl px-5 py-3 font-semibold bg-[#ff7a00] text-white hover:bg-[#e96e00] transition"
+                >
+                  {isAnnual ? "Elegir plan anual" : "Elegir plan mensual"}
+                </motion.button>
               </div>
             </motion.div>
           );
