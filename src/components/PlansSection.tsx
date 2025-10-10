@@ -71,11 +71,10 @@ const plans: Plan[] = [
       activation: "Activación: 189 € (IVA incl.)",
       total: "971,40 € / año",
     },
-    subtitle: "Chatbot informativo (sin reservas)",
+    subtitle: "Chatbot con reservas",
     features: [
       "ChatBot informativo 24/7",
       "FAQ, horarios y contacto",
-      "Branding básico",
       "Panel de control esencial",
       "Reservas automáticas",
       "Dashboard completo con estadísticas",
@@ -85,7 +84,7 @@ const plans: Plan[] = [
     visuals: [
       {
         icon: MessageCircle,
-        title: "Chatbot con Dashboard",
+        title: "GastroBot con Dashboard",
         desc: "Asistente virtual completo con panel de control para atención al cliente",
       },
     ],
@@ -104,7 +103,7 @@ const plans: Plan[] = [
       total: "1.150 € / año",
       commission: "0,3 % por transacción",
     },
-    subtitle: "GastroBot con reservas + Split QR integrado",
+    subtitle: "GastroBot con reservas y dashboard + Split QR integrado",
     features: [
       "Configuración personalizada",
       "Integración con Chatbot",
@@ -119,7 +118,7 @@ const plans: Plan[] = [
     visuals: [
       {
         icon: MessageCircle,
-        title: "Chatbot con Dashboard",
+        title: "Chatbot",
         desc: "Asistente virtual completo con panel de control para atención al cliente",
       },
       {
