@@ -196,25 +196,6 @@ export default function PlansSection() {
                 </h3>
               </div>
 
-              {/* Bloques visuales por plan */}
-              <div className="mt-6 space-y-4">
-                {plan.visuals.map((v, i) => {
-                  const VIcon = v.icon;
-                  return (
-                    <div
-                      key={i}
-                      className="flex flex-col items-center text-center"
-                    >
-                      <VIcon className="w-8 h-8 text-[#ff7a00] mb-2" />
-                      <p className="font-semibold text-[#0b2545]">{v.title}</p>
-                      <p className="text-sm text-[#6b7a90] max-w-[240px]">
-                        {v.desc}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-
               {/* Switch dentro de la tarjeta */}
               <div className="mt-6 flex items-center justify-center gap-3">
                 <span
@@ -273,6 +254,25 @@ export default function PlansSection() {
                 )}
               </div>
 
+              {/* Bloques visuales (debajo del precio) */}
+              <div className="mt-6 space-y-3">
+                {plan.visuals.map((v, i) => {
+                  const VIcon = v.icon;
+                  return (
+                    <div
+                      key={i}
+                      className="flex items-center gap-3 bg-gray-50 rounded-xl p-3 shadow-sm hover:shadow-md transition"
+                    >
+                      <VIcon className="w-8 h-8 text-[#ff7a00] flex-shrink-0" />
+                      <div>
+                        <p className="font-semibold text-[#0b2545]">{v.title}</p>
+                        <p className="text-sm text-[#6b7a90]">{v.desc}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
               {/* Features */}
               <ul className="mt-6 space-y-3 text-left text-[#0b2545]">
                 {plan.features.map((f) => (
@@ -283,16 +283,13 @@ export default function PlansSection() {
                 ))}
               </ul>
 
+              {/* Botón naranja */}
               <div className="mt-8">
                 <PlanCheckoutDialog planName={plan.name}>
                   <motion.button
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`w-full rounded-xl px-5 py-3 font-semibold transition ${
-                      plan.popular
-                        ? "bg-[#ff7a00] text-white hover:bg-[#e96e00]"
-                        : "bg-[#0b2545] text-white hover:bg-[#081a33]"
-                    }`}
+                    className="w-full rounded-xl px-5 py-3 font-semibold bg-[#ff7a00] text-white hover:bg-[#e96e00] transition"
                   >
                     {isAnnual
                       ? `Elegir plan anual`
