@@ -1,103 +1,196 @@
-import { CheckCircle2, MessageCircle, PhoneCall, LayoutDashboard, QrCode } from "lucide-react";
+"use client";
+import { motion } from "framer-motion";
+import {
+  MessageCircle,
+  LayoutDashboard,
+  QrCode,
+  CheckCircle2,
+  Info,
+} from "lucide-react";
 import PlanCheckoutDialog from "./PlanCheckoutDialog";
+import { useState } from "react";
 
-const PlansSection = () => {
-  const featuresLeft = [
-    { icon: MessageCircle, title: "Chatbot con Dashboard", desc: "Asistente virtual completo con panel de control para atención al cliente" },
-    { icon: LayoutDashboard, title: "Panel de Control", desc: "Dashboard integral para gestionar tu negocio" },
-    { icon: QrCode, title: "SplitQR", desc: "División automática de cuentas mediante código QR" },
-  ];
+const plans = [
+  {
+    name: "Split QR",
+    price: "14,99 €",
+    period: "/mes",
+    subtitle: "Precio sin IVA",
+    activation: null,
+    commission: "1 % por transacción",
+    annual: {
+      short: "Anual: 9,99 €/mes",
+      full: "Pagando anual: 9,99 €/mes (119,88 €/año, sin IVA).",
+    },
+    features: [
+      "Pagos divididos automáticos por QR",
+      "Panel básico de transacciones",
+      "Soporte por correo",
+      "Ideal para cafeterías y panaderías",
+    ],
+    icon: QrCode,
+    button: "Empezar con Split QR",
+    popular: false,
+  },
+  {
+    name: "Basic",
+    price: "65,20 €",
+    period: "/mes",
+    subtitle: "IVA incluido",
+    activation: "Activación única: 199 € (IVA incl.)",
+    commission: null,
+    annual: null,
+    features: [
+      "Chatbot informativo (sin reservas)",
+      "FAQ, horarios y contacto",
+      "Branding básico",
+      "Panel de control esencial",
+    ],
+    icon: MessageCircle,
+    button: "Empezar con Basic",
+    popular: false,
+  },
+  {
+    name: "Profesional",
+    price: "77,50 €",
+    period: "/mes",
+    subtitle: "IVA incluido",
+    activation: "Activación única: 249 € (IVA incl.)",
+    commission: "0,3 % por transacción",
+    annual: null,
+    features: [
+      "Reservas automáticas y recordatorios",
+      "Dashboard completo con estadísticas",
+      "Split QR integrado",
+      "Soporte prioritario y actualizaciones",
+    ],
+    icon: LayoutDashboard,
+    button: "Empezar con Profesional",
+    popular: true,
+  },
+];
 
-  const includes = [
-    "Configuración personalizada",
-    "Integración con Chatbot",
-    "Respuestas automáticas inteligentes",
-    "Gestión de reservas y citas",
-    "SplitQR para dividir cuentas",
-    "Análisis y reportes",
-    "Soporte técnico incluido",
-    "Actualizaciones mensuales",
-    "Sin permanencia",
-  ];
+export default function PlansSection() {
+  const [hovered, setHovered] = useState<string | null>(null);
 
   return (
-    <section id="plans" className="section-container py-24">
-      <div className="max-w-6xl mx-auto">
-        <div className="relative grid lg:grid-cols-2 gap-10 bg-white rounded-[26px] border border-[#e6ebf1] shadow-sm overflow-visible p-6 md:p-8">
-          {/* Badge Plan Recomendado */}
-          <div className="hidden md:block absolute -top-3 right-10">
-            <div className="bg-[#ff7a00] text-white text-sm font-semibold px-4 py-1 rounded-b-lg shadow-[0_6px_0_rgba(0,0,0,0.06)]">
-              Plan Recomendado
-            </div>
-          </div>
+    <section id="plans" className="py-24 bg-gradient-to-b from-white to-[#f8fafc]">
+      <div className="max-w-6xl mx-auto text-center mb-16">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl font-extrabold text-[#0b2545]"
+        >
+          Planes diseñados para hacer crecer tu negocio
+        </motion.h2>
+        <p className="text-[#6b7a90] mt-3 text-lg">
+          Tecnología premium, experiencia fluida y soporte cercano. Elige el
+          plan que mejor encaje contigo.
+        </p>
+      </div>
 
-          {/* Left column */}
-          <div className="px-2 md:px-4">
-            <h3 className="text-[36px] leading-tight font-extrabold text-[#0b2545]">Professional</h3>
-
-            <div className="flex items-end gap-2 mt-3">
-              <div className="text-[56px] font-extrabold leading-none text-[#ff7a00]">€79</div>
-              <div className="text-[#6b7a90] mb-1 text-lg">/mes</div>
-            </div>
-
-            <div className="text-sm text-[#6b7a90] mt-1">
-              Pago inicial/activación de <span className="font-medium">€199</span> (IVA incluido)
-            </div>
-
-            <p className="text-[#0b2545cc] mt-6 leading-7 max-w-prose">
-              El Plan Profesional de Fluxo te ofrece un asistente virtual por Chat,
-              junto con un panel de control integral para gestionar tu negocio desde un solo lugar y el sistema SplitQR para agilizar cobros y evitar largas colas a la hora de pagar cuentas divididas.
-              Perfecto para restaurantes y comercios que buscan automatizar tareas, atender a más
-              clientes y aumentar sus ventas sin esfuerzo.
-            </p>
-
-            <div className="mt-8 space-y-4">
-              {featuresLeft.map((f, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-2xl bg-[#ffe7d6] flex items-center justify-center">
-                    <f.icon className="w-5 h-5 text-[#ff7a00]" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-[#0b2545]">{f.title}</div>
-                    <div className="text-sm text-[#6b7a90]">{f.desc}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-8">
-              <PlanCheckoutDialog plan="Professional" triggerClassName="w-full md:w-auto px-6 py-3 rounded-2xl bg-[#ff7a00] hover:bg-[#e96f00] text-white font-semibold shadow-sm transition">
-                Empezar con este plan
-              </PlanCheckoutDialog>
-            </div>
-          </div>
-
-          {/* Right column: includes */}
-          <div className="px-2 md:px-4">
-            <div className="bg-[#eaf3ff] rounded-[20px] p-6 md:p-8 border border-[#d7e6ff]">
-              <h4 className="text-[20px] font-bold text-[#0b2545] mb-5">¿Qué incluye?</h4>
-              <div className="space-y-3">
-                {includes.map((text, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="text-[#ff7a00]">
-                      <CheckCircle2 className="w-5 h-5" />
-                    </div>
-                    <span className="text-[#0b2545]">{text}</span>
-                  </div>
-                ))}
+      <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
+        {plans.map((plan, idx) => (
+          <motion.div
+            key={plan.name}
+            onMouseEnter={() => setHovered(plan.name)}
+            onMouseLeave={() => setHovered(null)}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: idx * 0.1, duration: 0.6 }}
+            className={`relative flex flex-col border rounded-[26px] p-8 bg-white transition-all duration-500 cursor-pointer ${
+              hovered === plan.name ? "shadow-2xl scale-[1.03]" : "shadow-sm"
+            } ${
+              plan.popular
+                ? "border-[#ff7a00] shadow-[0_0_25px_rgba(255,122,0,0.25)]"
+                : "border-[#e6ebf1]"
+            }`}
+          >
+            {plan.popular && (
+              <div className="absolute -top-3 right-6 animate-pulse bg-[#ff7a00] text-white text-sm font-semibold px-4 py-1 rounded-b-lg shadow-[0_6px_0_rgba(0,0,0,0.06)]">
+                Más popular ⭐
               </div>
+            )}
 
-              <div className="mt-6">
-                <span className="inline-block text-xs font-semibold text-[#ff7a00] bg-white px-3 py-1 rounded-xl border border-[#ffd2b1]">
-                  Sin permanencia. Cancela cuando quieras.
+            <div className="flex flex-col items-center">
+              <plan.icon className="w-12 h-12 text-[#ff7a00] mb-3 drop-shadow-sm" />
+              <h3 className="text-2xl font-bold text-[#0b2545]">
+                {plan.name}
+              </h3>
+            </div>
+
+            <div className="flex flex-col items-center mt-4">
+              <div className="flex items-end gap-1">
+                <span className="text-[48px] font-extrabold text-[#ff7a00] leading-none">
+                  {plan.price}
+                </span>
+                <span className="text-lg text-[#6b7a90] mb-2">
+                  {plan.period}
                 </span>
               </div>
+              {plan.subtitle && (
+                <p className="text-sm text-[#6b7a90]">{plan.subtitle}</p>
+              )}
+
+              {/* Tooltip interactivo anual */}
+              {plan.annual && (
+                <div className="mt-3 relative flex items-center gap-2 text-sm text-[#6b7a90]">
+                  <span className="bg-gray-100 rounded px-2 py-1">
+                    {plan.annual.short}
+                  </span>
+                  <div className="group relative flex">
+                    <Info className="w-4 h-4 text-gray-400 group-hover:text-[#ff7a00] transition" />
+                    <span className="absolute top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition bg-white border border-gray-200 rounded-lg shadow-md px-3 py-2 text-xs text-gray-700 w-56 z-10">
+                      {plan.annual.full}
+                    </span>
+                  </div>
+                </div>
+              )}
+
+              {plan.activation && (
+                <p className="mt-2 text-sm font-medium text-[#0b2545]">
+                  {plan.activation}
+                </p>
+              )}
+
+              {plan.commission && (
+                <p className="mt-1 text-sm text-[#0b2545]">
+                  {plan.commission}
+                </p>
+              )}
             </div>
-          </div>
-        </div>
+
+            <ul className="mt-6 space-y-3 text-left text-[#0b2545]">
+              {plan.features.map((f) => (
+                <li key={f} className="flex items-start gap-2 text-sm">
+                  <CheckCircle2 className="w-4 h-4 text-[#ff7a00] mt-0.5 flex-shrink-0" />
+                  <span>{f}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-8">
+              <PlanCheckoutDialog planName={plan.name}>
+                <motion.button
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
+                  className={`w-full rounded-xl px-5 py-3 font-semibold transition ${
+                    plan.popular
+                      ? "bg-[#ff7a00] text-white hover:bg-[#e96e00]"
+                      : "bg-[#0b2545] text-white hover:bg-[#081a33]"
+                  }`}
+                >
+                  {plan.button}
+                </motion.button>
+              </PlanCheckoutDialog>
+            </div>
+          </motion.div>
+        ))}
       </div>
+
+      {/* Luz interactiva al mover el ratón (efecto lujo) */}
+      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,122,0,0.04)_0%,transparent_70%)] blur-3xl"></div>
     </section>
   );
-};
-
-export default PlansSection;
+}
