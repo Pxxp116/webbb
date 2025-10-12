@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 
 const sections = [
   { id: "hero", label: "Inicio" },
-  { id: "soluciones", label: "Soluciones" },
+  { id: "productos", label: "Soluciones" },
   { id: "benefits", label: "Beneficios" },
   { id: "plans", label: "Planes" },
   { id: "faq", label: "FAQ" },
