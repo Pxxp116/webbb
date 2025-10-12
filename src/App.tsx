@@ -9,6 +9,7 @@ import Automatizacion from "./components/AutomationSection";
 import Beneficios from "./components/BenefitsSection";
 import Planes from "./components/PlansSection";
 import FAQ from "./components/FAQSection";
+import MicroSolutionsRequest from "./components/MicroSolutionsRequest"; // 🧠 Nueva sección
 
 function App() {
   return (
@@ -22,6 +23,11 @@ function App() {
 
           <section id="productos">
             <Productos />
+          </section>
+
+          {/* 💡 Nueva sección: Microsoluciones personalizadas */}
+          <section id="microsoluciones">
+            <MicroSolutionsRequest />
           </section>
 
           {/* 🧾 Nueva sección: SplitQR */}
@@ -51,6 +57,7 @@ function App() {
             <FAQ />
           </section>
         </main>
+
         <Footer />
         {/* ❌ Eliminado <FooterLegal /> porque ahora se gestiona desde el footer azul */}
       </div>
