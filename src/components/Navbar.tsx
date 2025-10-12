@@ -119,20 +119,16 @@ export default function Navbar() {
       }
     >
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-full transition-all duration-300">
-        {/* ✅ Logo ocupa toda la altura de la navbar */}
+        {/* ✅ Logo ocupa literalmente toda la altura de la navbar */}
         <a href="#hero" className="flex items-center h-full">
           <img
-            src="/logo-fluxo.png"
+            src="/logo-fluxo.png?v=2"
             alt="Fluxo"
             className={
-              "h-full w-auto object-contain transition-all duration-300 " +
-              (scrolled ? "scale-100 opacity-95" : "scale-100 opacity-100")
+              "block h-full max-h-full w-auto object-cover -my-[6px] md:-my-[8px] transition-all duration-300 " +
+              (scrolled ? "opacity-95" : "opacity-100")
             }
-            style={{
-              height: "100%",
-              maxHeight: "100%",
-              transformOrigin: "left center",
-            }}
+            style={{ transformOrigin: "left center" }}
           />
         </a>
 
