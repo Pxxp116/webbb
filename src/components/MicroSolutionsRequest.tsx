@@ -92,11 +92,12 @@ export default function MicroSolutionsRequest() {
             <div className="rounded-2xl border p-5 bg-white shadow-sm">
               <h3 className="font-semibold text-lg">¿Qué entregamos?</h3>
               <ul className="mt-3 list-disc list-inside text-neutral-700 space-y-1">
-                <li>Automatización de flujos y procesos</li>
+                <li>Sistemas inteligentes diseñados a medida</li>
                 <li>Chatbots/Asistentes a medida</li>
-                <li>Integraciones con APIs y CRMs</li>
-                <li>Módulos de analítica e informes</li>
-                <li>Microapps o funciones específicas</li>
+                <li>Flujos de trabajo digitales optimizados</li>
+                <li>Integraciones fluidas con tus herramientas y plataformas</li>
+                <li>Paneles de control y análisis personalizados</li>
+                <li>Microapps o funciones específicas para tu negocio</li>
               </ul>
             </div>
 
