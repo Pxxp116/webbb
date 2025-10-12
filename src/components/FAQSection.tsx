@@ -6,28 +6,28 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "¿Qué hace exactamente el bot y cómo ayuda a mi negocio?",
-      answer: "Nuestro chatbot funciona como un asistente virtual que atiende a tus clientes las 24 horas desde tu propio panel de reservas. Puede responder preguntas frecuentes, tomar reservas, gestionar citas, proporcionar información sobre tus servicios y derivar consultas complejas a tu equipo humano. Esto te permite atender más clientes, reducir tiempo de respuesta y nunca perder una venta por no estar disponible."
+      question: "¿Qué tipo de soluciones crea Fluxo Services?",
+      answer: "Desarrollamos software inteligente y adaptable para optimizar tareas, procesos y comunicación dentro de cualquier negocio. Desde sistemas internos hasta herramientas para clientes, cada solución se diseña a medida según tus objetivos y tu forma de trabajar."
     },
     {
-      question: "¿Necesito tener conocimientos técnicos para usarlo?",
-      answer: "No necesitas ningún conocimiento técnico. Nosotros nos encargamos de toda la configuración, integración y personalización. Solo necesitas tener WhatsApp Business y nosotros hacemos el resto. Además, incluimos formación para que sepas cómo sacar el máximo provecho de tu asistente virtual."
+      question: "¿Trabajan solo con algunos sectores o cualquier tipo de empresa?",
+      answer: "Trabajamos con todo tipo de empresas: desde negocios locales y pymes hasta compañías con operaciones más amplias. Nuestras soluciones se adaptan al tamaño y las necesidades de cada cliente, sin importar el sector."
     },
     {
-      question: "¿Qué incluye el servicio mensual de €39?",
-      answer: "El plan mensual incluye el funcionamiento completo del chatbot, hosting en nuestros servidores, actualizaciones regulares, soporte técnico, análisis de conversaciones, backup automático y todas las mejoras que implementemos. También incluye hasta 1000 conversaciones mensuales, que es más que suficiente para la mayoría de negocios."
+      question: "¿Cómo funciona el proceso si quiero un software personalizado?",
+      answer: "Analizamos contigo los puntos clave de tu negocio y diseñamos una propuesta técnica clara, con objetivos medibles. A partir de ahí, construimos la solución paso a paso, te la mostramos en funcionamiento y la dejamos lista para usar. Sin tecnicismos, sin complicaciones."
     },
     {
       question: "¿Hay permanencia o puedo cancelar cuando quiera?",
-      answer: "No hay permanencia. Puedes cancelar el servicio cuando quieras y solo pagarás por el tiempo que lo hayas usado. Eso sí, recomendamos darle al menos 2-3 meses para ver todos los beneficios, ya que los clientes necesitan tiempo para acostumbrarse al nuevo sistema."
+      answer: "No hay permanencia. Puedes cancelar el servicio cuando quieras. Eso sí, recomendamos darle al menos 2-3 meses para ver todos los beneficios, ya que los clientes necesitan tiempo para acostumbrarse al nuevo sistema."
     },
     {
-      question: "¿Cómo se personaliza para mi tipo de negocio?",
-      answer: "Antes de activar tu bot, hacemos una sesión de configuración donde analizamos tu negocio, tus servicios, tu forma de hablar con los clientes y tus procesos. Programamos el bot para que use tu vocabulario, conozca tus horarios, precios y servicios, y pueda manejar las situaciones más comunes de tu sector."
+      question: "¿Qué beneficios concretos obtengo al trabajar con Fluxo Services?",
+      answer: "Reducción de tareas repetitivas, mayor control de tus operaciones, información en tiempo real y una mejora visible en la experiencia del cliente. En resumen: más tiempo para lo importante y un negocio que avanza solo."
     },
     {
-      question: "¿Qué pasa si el bot no sabe responder algo?",
-      answer: "Cuando el bot no puede resolver una consulta, automáticamente deriva la conversación a tu equipo humano y te notifica para que puedas responder personalmente. Además, registramos estas situaciones para mejorar las respuestas del bot en futuras actualizaciones."
+      question: "¿Qué diferencia a Fluxo Services de otras empresas tecnológicas?",
+      answer: "Creamos microsoluciones inteligentes, no sistemas genéricos. Nuestras herramientas son ligeras, rápidas y hechas a medida. No vendemos productos cerrados: construimos tecnología que entiende y se adapta a tu negocio."
     }
   ];
 
