@@ -137,7 +137,7 @@ export default function Navbar() {
             <NavLink key={s.id} id={s.id} label={s.label} />
           ))}
           <a
-            href="https://fluxodemo.carrd.co"
+            href="https://preview--gatrobot-999-lunes6-77548-81865-64714-11392.lovable.app/chatbot/a6697f05-6811-48dc-adc5-bdf585925c30"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-4 btn-outline rounded-full px-5 py-2"
