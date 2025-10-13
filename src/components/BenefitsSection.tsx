@@ -6,37 +6,37 @@ const BenefitsSection = () => {
       icon: Users,
       number: "01",
       title: "Gana más clientes",
-      description: "Al estar disponible 24/7 en tu propio chat integrado, nunca pierdes una oportunidad de venta. Tus clientes pueden contactarte cuando quieran."
+      description: "Con herramientas como GastroBot o SplitQR, conviertes cada punto de contacto en una oportunidad real. Estás presente donde tus clientes ya están, sin perder ninguna venta por falta de respuesta o agilidad."
     },
     {
       icon: Award,
       number: "02", 
       title: "Mejora tu imagen profesional",
-      description: "Ofrece una atención rápida, clara y coherente que impresiona a tus clientes y te diferencia de la competencia."
+      description: "Tus sistemas reflejan innovación y confianza. Desde asistentes digitales hasta paneles de gestión visuales, cada solución de Fluxo Services eleva la percepción de tu marca y la hace más competitiva."
     },
     {
       icon: Settings,
       number: "03",
       title: "Personalización total",
-      description: "Adaptamos el chatbot a tu tipo de negocio, tu vocabulario y tus procesos específicos para que refleje tu marca."
+      description: "Diseñamos tecnología que se adapta a tu negocio, no al revés. Ajustamos procesos, lenguaje y diseño para que cada herramienta —como GastroBot o tus sistemas internos— proyecte tu identidad."
     },
     {
       icon: HeadphonesIcon,
       number: "04",
       title: "Soporte y evolución constante",
-      description: "Incluimos asistencia continua y actualizaciones mensuales para que tu bot mejore constantemente."
+      description: "No entregamos y desaparecemos. Te acompañamos con mejoras continuas, soporte técnico y optimización constante para que tus soluciones crezcan junto a tu empresa."
     },
     {
       icon: Smartphone,
       number: "05",
       title: "Fácil y familiar para tus clientes",
-      description: "Tu asistente funciona independientemente, sin apps raras. No necesitan descargar nada nuevo."
+      description: "Nuestras soluciones funcionan sin fricción: tus clientes interactúan directamente, sin apps ni complicaciones. Todo es claro, accesible y pensado para mejorar la experiencia de uso."
     },
     {
       icon: Clock,
       number: "06",
       title: "Ahorra tiempo y trabajo repetitivo",
-      description: "Automatiza respuestas frecuentes, reservas y consultas básicas mientras te enfocas en tareas más importantes."
+      description: "Delegas las tareas repetitivas y el trabajo manual en sistemas inteligentes. Evitas perder clientes y ganas tiempo para centrarte en lo que realmente importa: hacer crecer tu negocio."
     }
   ];
 

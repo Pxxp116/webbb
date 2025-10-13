@@ -19,7 +19,7 @@ const SplitQRSection = () => {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         {/* Left: copy & features */}
         <div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-primary">Divide cuentas sin complicaciones</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-primary">Split QR ivide cuentas sin complicaciones</h2>
           <p className="mt-4 text-muted-foreground max-w-prose">
             SplitQR permite a tus clientes dividir la cuenta de forma automática. 
             Solo escanean el QR, seleccionan sus productos y pagan su parte directamente desde el móvil.

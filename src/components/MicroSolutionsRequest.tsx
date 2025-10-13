@@ -244,7 +244,7 @@ export default function MicroSolutionsRequest() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="inline-flex items-center justify-center rounded-xl bg-black px-5 py-2.5 text-white font-medium hover:bg-black/90 disabled:opacity-50"
+                  className="inline-flex items-center justify-center rounded-xl btn-primary px-5 py-2.5 text-white font-medium hover:opacity-90 disabled:opacity-50"
                 >
                   {loading ? 'Enviando…' : 'Enviar solicitud'}
                 </button>

@@ -516,10 +516,10 @@ ________________________________________
           <div>
             <h4 className="font-semibold mb-4">Servicios</h4>
             <ul className="space-y-3 text-primary-foreground/80">
-              <li>Chatbot WhatsApp</li>
-              <li>Asistente de Voz</li>
-              <li>Panel de Control</li>
+              <li>Gastrobot</li>
+              <li>Split QR</li>
               <li>Softwares</li>
+              <li>Soluciones personalizadas</li>
             </ul>
           </div>
 
