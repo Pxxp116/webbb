@@ -7,7 +7,6 @@ import SplitQRSection from "./components/SplitQRSection";
 import GastroBotSection from "./components/GastroBotSection";
 import Automatizacion from "./components/AutomationSection";
 import Beneficios from "./components/BenefitsSection";
-import Planes from "./components/PlansSection";
 import FAQ from "./components/FAQSection";
 import MicroSolutionsRequest from "./components/MicroSolutionsRequest"; // 🧠 Nueva sección
 
