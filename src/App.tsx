@@ -48,9 +48,7 @@ function App() {
             <Beneficios />
           </section>
 
-          <section id="planes">
-            <Planes />
-          </section>
+
 
           <section id="faq">
             <FAQ />
