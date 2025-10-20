@@ -1,4 +1,3 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -6,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // función util para limpiar texto
 const clean = (s?: string) => (s ?? '').toString().trim();
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req: any, res: any) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ ok: false, error: 'Method Not Allowed' });
@@ -22,12 +21,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       features,
       budget,
       deadline,
-      honeypot,
       consent,
+      honeypot,
     } = req.body || {};
 
-    // honeypot (spam)
-    if (honeypot && String(honeypot).trim() !== '') {
+    // anti-spam sencillo
+    if (honeypot) {
       return res.status(200).json({ ok: true });
     }
 
@@ -39,7 +38,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // correo destino fijo
     const to = 'p.equix25@gmail.com';
 
-    // usamos un remitente universal que no necesita dominio verificado
+    // remitente universal de Resend (no requiere dominio verificado)
     const from = 'onboarding@resend.dev';
 
     const subject = `🧠 Nueva solicitud de microsolución — ${clean(name)}`;
@@ -66,12 +65,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       to,
       subject,
       html,
-      reply_to: clean(email),
+      // ✅ corrección aquí:
+      replyTo: clean(email),
     });
 
-    // verificamos si Resend respondió correctamente
-    if (!result || result.error) {
-      console.error('Resend error:', result?.error);
+    if (!result || (result as any).error) {
+      console.error('Resend error:', (result as any)?.error);
       return res.status(500).json({ ok: false, error: 'Error enviando correo con Resend' });
     }
 
