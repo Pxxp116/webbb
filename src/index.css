@@ -167,3 +167,67 @@ html {
 section {
   scroll-margin-top: 96px;
 }
+
+/* === Fluxo: Fondo fijo con animación suave === */
+:root {
+  /* Ruta del fondo (sirve con Vite desde /public) */
+  --fluxo-bg-url: url('/backgrounds/fluxo-bg.webp');
+
+  /* Intensidad del efecto (ajusta si quieres) */
+  --fluxo-scale-min: 1.02;
+  --fluxo-scale-max: 1.06;
+}
+
+/* Mantén el fondo base blanco y el contenido por encima */
+html, body, #root {
+  background: #ffffff;
+  min-height: 100%;
+}
+
+/* Capa de fondo fija y detrás del contenido */
+body::before {
+  content: "";
+  position: fixed;         /* <- No se mueve con el scroll */
+  inset: 0;
+  z-index: -1;             /* detrás de todo */
+  pointer-events: none;    /* no bloquea clicks */
+
+  /* Imagen + cobertura total */
+  background-image: var(--fluxo-bg-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  /* Si quieres suavizar aún más los colores sobre blanco,
+     descomenta esta línea:
+  background-blend-mode: lighten; */
+
+  /* Animación "respirar" */
+  animation: fluxo-breathe 22s ease-in-out infinite alternate;
+  will-change: transform, background-position;
+  transform: scale(var(--fluxo-scale-min));
+}
+
+/* Animación: sutil cambio de posición + zoom ligero */
+@keyframes fluxo-breathe {
+  0% {
+    transform: scale(var(--fluxo-scale-min));
+    background-position: 48% 52%;
+  }
+  50% {
+    transform: scale(var(--fluxo-scale-max));
+    background-position: 52% 48%;
+  }
+  100% {
+    transform: scale(var(--fluxo-scale-min));
+    background-position: 50% 50%;
+  }
+}
+
+/* Accesibilidad: si el usuario prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+    transform: none;
+  }
+}
