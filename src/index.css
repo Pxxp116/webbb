@@ -1,177 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Fluxo Design System - Modern, Clean, Professional */
-
-/* ✅ Importamos Montserrat desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
-
-@layer base {
-  :root {
-    /* Core Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 210 24% 16%;
-    
-    /* Blue Palette */
-    --primary: 210 100% 12%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 210 100% 96%;
-    --primary-muted: 210 40% 90%;
-    
-    /* Orange Accent */
-    --accent-orange: 25 95% 53%;
-    --accent-orange-hover: 25 95% 48%;
-    --accent-orange-light: 25 95% 96%;
-    
-    /* Neutral Grays */
-    --secondary: 210 16% 98%;
-    --secondary-foreground: 210 24% 16%;
-    --muted: 210 16% 96%;
-    --muted-foreground: 210 16% 50%;
-    
-    /* UI Elements */
-    --card: 0 0% 100%;
-    --card-foreground: 210 24% 16%;
-    --border: 210 20% 90%;
-    --input: 210 20% 95%;
-    --ring: 25 95% 53%;
-    
-    /* Semantic Colors */
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-    
-    /* Design Tokens */
-    --radius: 12px;
-    --shadow-soft: 0 4px 20px -2px hsl(210 40% 8% / 0.1);
-    --shadow-medium: 0 10px 40px -4px hsl(210 40% 8% / 0.15);
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 12%), hsl(210 100% 20%));
-    --gradient-orange: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 48%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 16% 98%));
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Montserrat', sans-serif !important; /* ✅ Fuente global */
-  }
-}
-
-@layer components {
-  /* Typography */
-  .text-hero {
-    @apply text-5xl md:text-7xl font-bold tracking-tight leading-tight;
-  }
-  
-  .text-section-title {
-    @apply text-3xl md:text-4xl font-bold tracking-tight;
-  }
-  
-  .text-subsection {
-    @apply text-xl md:text-2xl font-semibold;
-  }
-  
-  /* Buttons */
-  .btn-primary {
-    @apply bg-[hsl(var(--accent-orange))] hover:bg-[hsl(var(--accent-orange-hover))] text-white font-semibold rounded-full px-5 py-2.5 shadow-md hover:shadow-lg transition-all duration-300;
-  }
-  
-  .btn-secondary {
-    @apply bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] font-semibold px-8 py-4 rounded-2xl border-2 border-[hsl(var(--primary))] hover:bg-transparent hover:text-[hsl(var(--primary))] transition-all duration-300;
-  }
-  
-  .btn-outline {
-    @apply border-2 border-[hsl(var(--foreground))] text-[hsl(var(--foreground))] bg-white rounded-full px-5 py-2.5 hover:bg-[hsl(var(--foreground))] hover:text-white transition-all duration-300;
-  }
-  
-  /* Cards */
-  .card-elevated {
-    @apply bg-[hsl(var(--card))] rounded-3xl shadow-[var(--shadow-soft)] border border-[hsl(var(--border))] p-8 hover:shadow-[var(--shadow-medium)] transition-all duration-300;
-  }
-  
-  .card-benefit {
-    @apply bg-[hsl(var(--card))] rounded-2xl p-6 border border-[hsl(var(--border))] hover:border-[hsl(var(--accent-orange))] transition-all duration-300;
-  }
-  
-  /* Sections */
-  .section-container {
-    @apply max-w-7xl mx-auto px-6 lg:px-8;
-  }
-  
-  .section-padding {
-    @apply py-20 lg:py-32;
-  }
-  
-  /* Gradients & Backgrounds */
-  .bg-gradient-primary {
-    background: var(--gradient-primary);
-  }
-  
-  .bg-gradient-orange {
-    background: var(--gradient-orange);
-  }
-  
-  .bg-gradient-subtle {
-    background: var(--gradient-subtle);
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-section {
-  scroll-margin-top: 96px;
-}
-
 /* === Fluxo: Fondo fijo con animación suave === */
 :root {
-  /* Ruta del fondo (sirve con Vite desde /public) */
-  --fluxo-bg-url: url('/backgrounds/fluxo-bg.webp');
+  /* Fondo de prueba con degradado (azul, blanco, naranja) */
+  --fluxo-bg-url: radial-gradient(circle at 30% 50%, #ff7a00, #ffffff 40%, #0090ff);
+
+  /* Cuando subas la imagen real, cambia la línea de arriba por:
+     --fluxo-bg-url: url('/backgrounds/fluxo-bg.webp'); */
 
   /* Intensidad del efecto (ajusta si quieres) */
   --fluxo-scale-min: 1.02;
@@ -187,20 +20,17 @@ html, body, #root {
 /* Capa de fondo fija y detrás del contenido */
 body::before {
   content: "";
-  position: fixed;         /* <- No se mueve con el scroll */
+  position: fixed;        /* <- No se mueve con el scroll */
   inset: 0;
-  z-index: -1;             /* detrás de todo */
-  pointer-events: none;    /* no bloquea clicks */
+  z-index: -1;            /* detrás de todo */
+  pointer-events: none;   /* no bloquea clicks */
 
-  /* Imagen + cobertura total */
+  /* Imagen o degradado + cobertura total */
   background-image: var(--fluxo-bg-url);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-
-  /* Si quieres suavizar aún más los colores sobre blanco,
-     descomenta esta línea:
-  background-blend-mode: lighten; */
+  opacity: 0.9; /* <- opcional, suaviza los colores */
 
   /* Animación "respirar" */
   animation: fluxo-breathe 22s ease-in-out infinite alternate;
