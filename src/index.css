@@ -168,66 +168,45 @@ section {
   scroll-margin-top: 96px;
 }
 
-/* === Fluxo: Fondo fijo con animación suave === */
-:root {
-  /* Fondo de prueba con degradado (azul, blanco, naranja) */
-  --fluxo-bg-url: radial-gradient(circle at 30% 50%, #ff7a00, #ffffff 40%, #0090ff);
-
-  /* Cuando subas la imagen real, cambia la línea de arriba por:
-     --fluxo-bg-url: url('/backgrounds/fluxo-bg.webp'); */
-
-  /* Intensidad del efecto (ajusta si quieres) */
-  --fluxo-scale-min: 1.02;
-  --fluxo-scale-max: 1.06;
-}
-
-/* Mantén el fondo base blanco y el contenido por encima */
-html, body, #root {
-  background: #ffffff;
+/* === Fluxo: Fondo fijo y visible === */
+html, body {
+  background: transparent;           /* ← evita tapar el ::before */
   min-height: 100%;
+  overflow-x: hidden;
 }
 
-/* Capa de fondo fija y detrás del contenido */
+/* El contenedor de la app por encima del fondo */
+#root {
+  position: relative;
+  z-index: 1;                        /* ← contenido por encima */
+}
+
+/* Capa de fondo (por debajo del contenido, pero por encima del body) */
 body::before {
   content: "";
-  position: fixed;        /* <- No se mueve con el scroll */
+  position: fixed;
   inset: 0;
-  z-index: -1;            /* detrás de todo */
-  pointer-events: none;   /* no bloquea clicks */
+  z-index: 0;                        /* ← clave: ya NO -1 */
+  pointer-events: none;
 
-  /* Imagen o degradado + cobertura total */
-  background-image: var(--fluxo-bg-url);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
-  opacity: 0.9; /* <- opcional, suaviza los colores */
+  /* Usa la imagen real (y un degradado de respaldo ligero) */
+  background:
+    radial-gradient(circle at 30% 50%, rgba(255,122,0,0.18), rgba(0,144,255,0.12), rgba(255,255,255,0.9)),
+    url('/backgrounds/fluxo-bg.webp') no-repeat center/cover;
 
-  /* Animación "respirar" */
-  animation: fluxo-breathe 22s ease-in-out infinite alternate;
+  animation: fluxo-breathe 24s ease-in-out infinite alternate;
+  transform: scale(1.03);
   will-change: transform, background-position;
-  transform: scale(var(--fluxo-scale-min));
 }
 
-/* Animación: sutil cambio de posición + zoom ligero */
+/* Animación suave */
 @keyframes fluxo-breathe {
-  0% {
-    transform: scale(var(--fluxo-scale-min));
-    background-position: 48% 52%;
-  }
-  50% {
-    transform: scale(var(--fluxo-scale-max));
-    background-position: 52% 48%;
-  }
-  100% {
-    transform: scale(var(--fluxo-scale-min));
-    background-position: 50% 50%;
-  }
+  0%   { background-position: 48% 52%; transform: scale(1.02); }
+  50%  { background-position: 52% 48%; transform: scale(1.06); }
+  100% { background-position: 50% 50%; transform: scale(1.02); }
 }
 
-/* Accesibilidad: si el usuario prefiere menos movimiento */
+/* Accesibilidad: sin movimiento si el usuario lo prefiere */
 @media (prefers-reduced-motion: reduce) {
-  body::before {
-    animation: none;
-    transform: none;
-  }
+  body::before { animation: none; transform: none; }
 }
