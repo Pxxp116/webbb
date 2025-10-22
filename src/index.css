@@ -221,27 +221,6 @@ body::before {
   will-change: transform, background-position;
 }
 
-@keyframes fluxo-breathe {
-  0%   { background-position: 48% 52%; transform: scale(1.02); }
-  50%  { background-position: 52% 48%; transform: scale(1.06); }
-  100% { background-position: 50% 50%; transform: scale(1.02); }
-}
-
-@keyframes fluxo-breathe {
-  0% {
-    background-position: 48% 52%;
-    transform: scale(1.02);
-  }
-  50% {
-    background-position: 52% 48%;
-    transform: scale(1.06);
-  }
-  100% {
-    background-position: 50% 50%;
-    transform: scale(1.02);
-  }
-}
-
 /* === Animación del fondo Fluxo === */
 @keyframes fluxo-breathe {
   0% {
@@ -258,8 +237,6 @@ body::before {
   }
 }
 
-/* Clase personalizada para animar el fondo */
 .animate-fluxo-breathe {
   animation: fluxo-breathe 30s ease-in-out infinite alternate;
 }
-

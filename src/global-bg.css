@@ -1,49 +1,6 @@
-/* === Fluxo Background Animado === */
+/* Desactivado para evitar fondo global */
 body {
   background: #fff;
   overflow-x: hidden;
   min-height: 100vh;
-}
-
-/* Fondo fijo detrás del contenido */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-
-  /* Imagen principal + degradado de respaldo */
-  background:
-    radial-gradient(circle at 30% 50%, rgba(255,122,0,0.2), rgba(0,144,255,0.15), #ffffff),
-    url('/backgrounds/fluxo-bg.webp') no-repeat center/cover;
-
-  opacity: 0.95; /* ajusta entre 0.85 y 1.0 para suavizar */
-  animation: fluxo-breathe 24s ease-in-out infinite alternate;
-  transform: scale(1.03);
-  will-change: transform, background-position;
-}
-
-/* Animación "respirar" (movimiento y zoom suave) */
-@keyframes fluxo-breathe {
-  0% {
-    background-position: 48% 52%;
-    transform: scale(1.02);
-  }
-  50% {
-    background-position: 52% 48%;
-    transform: scale(1.06);
-  }
-  100% {
-    background-position: 50% 50%;
-    transform: scale(1.02);
-  }
-}
-
-/* Accesibilidad: sin movimiento si el usuario lo prefiere */
-@media (prefers-reduced-motion: reduce) {
-  body::before {
-    animation: none;
-    transform: none;
-  }
 }

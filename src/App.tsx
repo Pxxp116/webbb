@@ -9,7 +9,6 @@ import Automatizacion from "./components/AutomationSection";
 import Beneficios from "./components/BenefitsSection";
 import FAQ from "./components/FAQSection";
 import MicroSolutionsRequest from "./components/MicroSolutionsRequest"; // 🧠 Nueva sección
-import './global-bg.css';
 
 
 function App() {
