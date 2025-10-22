@@ -210,3 +210,34 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   body::before { animation: none; transform: none; }
 }
+
+/* === Fondo animado solo para HeroSection === */
+.hero-bg {
+  background:
+    radial-gradient(circle at 30% 50%, rgba(255,122,0,0.2), rgba(0,144,255,0.15), #ffffff),
+    url('/backgrounds/fluxo-bg.webp') no-repeat center/cover;
+  animation: fluxo-breathe 24s ease-in-out infinite alternate;
+  transform: scale(1.03);
+  will-change: transform, background-position;
+}
+
+@keyframes fluxo-breathe {
+  0%   { background-position: 48% 52%; transform: scale(1.02); }
+  50%  { background-position: 52% 48%; transform: scale(1.06); }
+  100% { background-position: 50% 50%; transform: scale(1.02); }
+}
+
+@keyframes fluxo-breathe {
+  0% {
+    background-position: 48% 52%;
+    transform: scale(1.02);
+  }
+  50% {
+    background-position: 52% 48%;
+    transform: scale(1.06);
+  }
+  100% {
+    background-position: 50% 50%;
+    transform: scale(1.02);
+  }
+}
