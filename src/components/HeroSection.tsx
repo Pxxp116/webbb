@@ -6,21 +6,26 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* === Fondo animado con video Kling (fix mobile) === */}
+      {/* === Fondo animado con video Kling (autoplay sin botón) === */}
       <video
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
+        aria-hidden="true"
+        disablePictureInPicture
+        controls={false}
         className="absolute inset-0 -z-10 w-full h-full object-cover pointer-events-none select-none"
         style={{
           transform: "scale(1.05)",
           filter: "brightness(1.05)",
           objectFit: "cover",
-          WebkitTransform: "translateZ(0)", // fuerza render GPU en Safari
-          WebkitMaskImage: "-webkit-radial-gradient(white, black)", // evita botón play
+          WebkitTransform: "translateZ(0)",
+          WebkitMaskImage: "-webkit-radial-gradient(white, black)",
+          backgroundColor: "transparent",
         }}
+        onContextMenu={(e) => e.preventDefault()} // evita menú o pausa al mantener pulsado
       >
         <source src="/backgrounds/fluxo-bg-animated.mp4" type="video/mp4" />
       </video>
