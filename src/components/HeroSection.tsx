@@ -1,26 +1,33 @@
-import { useRef } from "react";
 import { ArrowRight, Bot, MessageCircle } from "lucide-react";
 
 const HeroSection = () => {
-  const bgRef = useRef<HTMLDivElement>(null);
-
   return (
     <section
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* === Fondo base: misma imagen === */}
-      <div
-        ref={bgRef}
-        className="absolute inset-0 -z-10 pointer-events-none"
+      {/* === Fondo animado con video Kling === */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 -z-10 object-cover pointer-events-none"
         style={{
-          background: "url('/backgrounds/fluxo-bg.webp') center/cover no-repeat",
-          transform: "scale(1.03)",
-          filter: "brightness(1.03)",
+          transform: "scale(1.05)",
+          filter: "brightness(1.05)",
         }}
-      />
+      >
+        <source src="/backgrounds/fluxo-bg-animated.mp4" type="video/mp4" />
+        {/* Fallback en caso de error */}
+        <img
+          src="/backgrounds/fluxo-bg.webp"
+          alt="Fluxo background"
+          className="w-full h-full object-cover"
+        />
+      </video>
 
-      {/* === Tinte de color suave para integrar marca === */}
+      {/* === Tinte de color suave para integrar la marca === */}
       <div
         className="absolute inset-0 -z-10 opacity-60 mix-blend-soft-light"
         style={{
@@ -28,33 +35,6 @@ const HeroSection = () => {
             "radial-gradient(1200px 800px at 30% 40%, rgba(0,140,255,0.25), transparent 60%), radial-gradient(1000px 700px at 70% 60%, rgba(255,120,0,0.18), transparent 55%)",
         }}
       />
-
-      {/* === OLAS animadas === */}
-      <div className="hero-waves pointer-events-none" aria-hidden="true">
-        {/* Capa 1 - Azul suave */}
-        <svg className="wave wave-1" viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path
-            fill="rgba(0,140,255,0.15)"
-            d="M0,128L48,138.7C96,149,192,171,288,170.7C384,171,480,149,576,133.3C672,117,768,107,864,128C960,149,1056,203,1152,224C1248,245,1344,235,1392,229.3L1440,224L1440,0L0,0Z"
-          ></path>
-        </svg>
-
-        {/* Capa 2 - Azul más visible */}
-        <svg className="wave wave-2" viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path
-            fill="rgba(0,140,255,0.25)"
-            d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,160C840,160,960,192,1080,197.3C1200,203,1320,181,1380,170.7L1440,160L1440,0L0,0Z"
-          ></path>
-        </svg>
-
-        {/* Capa 3 - Toque naranja marca */}
-        <svg className="wave wave-3" viewBox="0 0 1440 320" preserveAspectRatio="none">
-          <path
-            fill="rgba(255,122,0,0.16)"
-            d="M0,192L80,197.3C160,203,320,213,480,218.7C640,224,800,224,960,202.7C1120,181,1280,139,1360,117.3L1440,96L1440,0L0,0Z"
-          ></path>
-        </svg>
-      </div>
 
       {/* === Contenido principal === */}
       <div className="section-container relative z-10">
@@ -68,7 +48,8 @@ const HeroSection = () => {
             </p>
             <p className="text-lg text-muted-foreground mb-12 max-w-xl">
               Diseñamos, desarrollamos e implementamos herramientas y softwares
-              que ayudan a tu negocio a trabajar de forma más eficiente e inteligente.
+              de optimización de tareas que ayudarán a tu negocio a trabajar de
+              forma más eficiente e inteligente.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
