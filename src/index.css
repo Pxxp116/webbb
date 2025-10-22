@@ -170,74 +170,64 @@ section {
 
 /* === Fluxo: Fondo fijo y visible === */
 html, body {
-  background: transparent;           /* ← evita tapar el ::before */
+  background: transparent;
   min-height: 100%;
   overflow-x: hidden;
 }
 
-/* El contenedor de la app por encima del fondo */
 #root {
   position: relative;
-  z-index: 1;                        /* ← contenido por encima */
+  z-index: 1;
 }
 
-/* Capa de fondo (por debajo del contenido, pero por encima del body) */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: 0;                        /* ← clave: ya NO -1 */
+  z-index: 0;
   pointer-events: none;
-
-  /* Usa la imagen real (y un degradado de respaldo ligero) */
   background:
     radial-gradient(circle at 30% 50%, rgba(255,122,0,0.18), rgba(0,144,255,0.12), rgba(255,255,255,0.9)),
     url('/backgrounds/fluxo-bg.webp') no-repeat center/cover;
-
   animation: fluxo-breathe 24s ease-in-out infinite alternate;
   transform: scale(1.03);
   will-change: transform, background-position;
 }
 
-/* Animación suave */
 @keyframes fluxo-breathe {
-  0%   { background-position: 48% 52%; transform: scale(1.02); }
-  50%  { background-position: 52% 48%; transform: scale(1.06); }
+  0% { background-position: 48% 52%; transform: scale(1.02); }
+  50% { background-position: 52% 48%; transform: scale(1.06); }
   100% { background-position: 50% 50%; transform: scale(1.02); }
 }
 
-/* Accesibilidad: sin movimiento si el usuario lo prefiere */
 @media (prefers-reduced-motion: reduce) {
   body::before { animation: none; transform: none; }
 }
 
-/* === Fondo animado solo para HeroSection === */
-.hero-bg {
-  background:
-    radial-gradient(circle at 30% 50%, rgba(255,122,0,0.2), rgba(0,144,255,0.15), #ffffff),
-    url('/backgrounds/fluxo-bg.webp') no-repeat center/cover;
-  animation: fluxo-breathe 24s ease-in-out infinite alternate;
-  transform: scale(1.03);
-  will-change: transform, background-position;
+/* === OLAS animadas del Hero === */
+.hero-waves {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -10;
 }
 
-/* === Animación del fondo Fluxo === */
-@keyframes fluxo-waves {
-  0% {
-    background-position: 48% 52%;
-    transform: scale(1.02);
-  }
-  50% {
-    background-position: 52% 48%;
-    transform: scale(1.05);
-  }
-  100% {
-    background-position: 50% 50%;
-    transform: scale(1.02);
-  }
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 120%;
+  left: 0;
+  transform: translateZ(0);
+  will-change: transform;
+  animation: wave-move 14s linear infinite;
+  pointer-events: none;
 }
 
+.wave-1 { top: -6%; opacity: 0.25; animation-duration: 22s; }
+.wave-2 { top: -2%; opacity: 0.35; animation-duration: 16s; }
+.wave-3 { top: 2%; opacity: 0.45; animation-duration: 10s; }
 
-.animate-fluxo-breathe {
-  animation: fluxo-breathe 30s ease-in-out infinite alternate;
+@keyframes wave-move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
