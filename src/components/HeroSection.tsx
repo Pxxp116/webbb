@@ -7,17 +7,17 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* === Fondo animado solo en el Hero === */}
-      <div className="absolute inset-0 -z-10 pointer-events-none animate-[fluxo-breathe_24s_ease-in-out_infinite_alternate]">
-        <div
-          className="w-full h-full"
-          style={{
-            background:
-              "radial-gradient(circle at 30% 50%, rgba(255,122,0,0.2), rgba(0,144,255,0.15), #ffffff), url('/backgrounds/fluxo-bg.webp') center/cover no-repeat",
-            transform: "scale(1.03)",
-            willChange: "transform, background-position",
-          }}
-        ></div>
-      </div>
+<div className="absolute inset-0 -z-10 pointer-events-none animate-fluxo-breathe">
+  <div
+    className="w-full h-full"
+    style={{
+      background:
+        "radial-gradient(circle at 30% 50%, rgba(255,122,0,0.2), rgba(0,144,255,0.15), #ffffff), url('/backgrounds/fluxo-bg.webp') center/cover no-repeat",
+      transform: "scale(1.03)",
+      willChange: "transform, background-position",
+    }}
+  ></div>
+</div>
 
       {/* Decoraciones originales */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
