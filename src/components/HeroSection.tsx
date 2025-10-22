@@ -6,38 +6,48 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* === Fondo animado con video Kling (autoplay sin botón) === */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        aria-hidden="true"
-        disablePictureInPicture
-        controls={false}
-        className="absolute inset-0 -z-10 w-full h-full object-cover pointer-events-none select-none"
-        style={{
-          transform: "scale(1.05)",
-          filter: "brightness(1.05)",
-          objectFit: "cover",
-          WebkitTransform: "translateZ(0)",
-          WebkitMaskImage: "-webkit-radial-gradient(white, black)",
-          backgroundColor: "transparent",
-        }}
-        onContextMenu={(e) => e.preventDefault()} // evita menú o pausa al mantener pulsado
+      {/* === Fondo animado Kling — fix definitivo iOS === */}
+      <div
+        className="absolute inset-0 -z-10 overflow-hidden"
+        style={{ transform: "scale(1.05)", filter: "brightness(1.05)" }}
       >
-        <source src="/backgrounds/fluxo-bg-animated.mp4" type="video/mp4" />
-      </video>
+        <video
+          id="fluxo-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          controls={false}
+          disablePictureInPicture
+          tabIndex={-1}
+          className="w-full h-full object-cover pointer-events-none select-none"
+          style={{
+            objectFit: "cover",
+            WebkitTransform: "translateZ(0)",
+            WebkitAppearance: "none",
+            backgroundColor: "transparent",
+            display: "block",
+          }}
+          onLoadedData={(e) => {
+            const vid = e.currentTarget;
+            vid.setAttribute("playsinline", "true");
+            vid.muted = true;
+            vid.play().catch(() => {});
+          }}
+        >
+          <source src="/backgrounds/fluxo-bg-animated.mp4" type="video/mp4" />
+        </video>
 
-      {/* Fallback si no se carga el video */}
-      <noscript>
-        <img
-          src="/backgrounds/fluxo-bg.webp"
-          alt="Fluxo background"
-          className="absolute inset-0 w-full h-full object-cover -z-10"
-        />
-      </noscript>
+        {/* fallback estático */}
+        <noscript>
+          <img
+            src="/backgrounds/fluxo-bg.webp"
+            alt="Fluxo background"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </noscript>
+      </div>
 
       {/* === Tinte de color suave para integrar la marca === */}
       <div
