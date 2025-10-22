@@ -6,26 +6,33 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* === Fondo animado con video Kling === */}
+      {/* === Fondo animado con video Kling (fix mobile) === */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 -z-10 object-cover pointer-events-none"
+        preload="auto"
+        className="absolute inset-0 -z-10 w-full h-full object-cover pointer-events-none select-none"
         style={{
           transform: "scale(1.05)",
           filter: "brightness(1.05)",
+          objectFit: "cover",
+          WebkitTransform: "translateZ(0)", // fuerza render GPU en Safari
+          WebkitMaskImage: "-webkit-radial-gradient(white, black)", // evita botón play
         }}
       >
         <source src="/backgrounds/fluxo-bg-animated.mp4" type="video/mp4" />
-        {/* Fallback en caso de error */}
+      </video>
+
+      {/* Fallback si no se carga el video */}
+      <noscript>
         <img
           src="/backgrounds/fluxo-bg.webp"
           alt="Fluxo background"
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover -z-10"
         />
-      </video>
+      </noscript>
 
       {/* === Tinte de color suave para integrar la marca === */}
       <div
