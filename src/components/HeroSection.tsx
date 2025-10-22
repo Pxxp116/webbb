@@ -5,12 +5,11 @@ const HeroSection = () => {
   const bgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Animación con JS: mueve el fondo de forma suave
     let t = 0;
     const animate = () => {
-      t += 0.0025; // velocidad del movimiento
-      const x = 50 + Math.sin(t) * 2; // movimiento horizontal
-      const y = 50 + Math.cos(t) * 2; // movimiento vertical
+      t += 0.002; // velocidad del movimiento
+      const x = 50 + Math.sin(t) * 2.5;
+      const y = 50 + Math.cos(t) * 2.5;
       if (bgRef.current) {
         bgRef.current.style.backgroundPosition = `${x}% ${y}%`;
         bgRef.current.style.transform = `scale(${1.02 + Math.sin(t) * 0.02})`;
@@ -25,14 +24,15 @@ const HeroSection = () => {
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* === Fondo animado solo en el Hero === */}
+      {/* === Fondo animado SOLO en el Hero === */}
       <div
         ref={bgRef}
-        className="absolute inset-0 -z-10 pointer-events-none transition-transform duration-700 ease-in-out"
+        className="absolute inset-0 -z-10 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle at 30% 50%, rgba(255,122,0,0.18), rgba(0,144,255,0.15), #ffffff), url('/backgrounds/fluxo-bg.webp') center/cover no-repeat",
+            "radial-gradient(circle at 30% 50%, rgba(255,122,0,0.2), rgba(0,144,255,0.15), #ffffff), url('/backgrounds/fluxo-bg.webp') center/cover no-repeat",
           transform: "scale(1.03)",
+          transition: "transform 0.2s ease-out",
         }}
       ></div>
 
@@ -44,7 +44,6 @@ const HeroSection = () => {
       {/* Contenido principal */}
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Texto */}
           <div className="text-center lg:text-left">
             <h1 className="text-hero text-primary mb-6">
               Software inteligente para negocios.
@@ -57,8 +56,6 @@ const HeroSection = () => {
               de optimización de tareas que ayudarán a tu negocio a trabajar de
               forma más eficiente e inteligente.
             </p>
-
-            {/* Botones CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="https://wa.me/message/YC7W3UVLEHFKB1"
@@ -81,7 +78,6 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Visual */}
           <div className="relative">
             <div className="card-elevated bg-gradient-to-br from-white to-primary-light p-12 transform rotate-3 hover:rotate-0 transition-transform duration-500">
               <div className="flex items-center justify-center mb-8">
