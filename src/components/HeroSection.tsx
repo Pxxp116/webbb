@@ -1,23 +1,40 @@
+import { useEffect, useRef } from "react";
 import { ArrowRight, Bot, MessageCircle } from "lucide-react";
 
 const HeroSection = () => {
+  const bgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Animación con JS: mueve el fondo de forma suave
+    let t = 0;
+    const animate = () => {
+      t += 0.0025; // velocidad del movimiento
+      const x = 50 + Math.sin(t) * 2; // movimiento horizontal
+      const y = 50 + Math.cos(t) * 2; // movimiento vertical
+      if (bgRef.current) {
+        bgRef.current.style.backgroundPosition = `${x}% ${y}%`;
+        bgRef.current.style.transform = `scale(${1.02 + Math.sin(t) * 0.02})`;
+      }
+      requestAnimationFrame(animate);
+    };
+    animate();
+  }, []);
+
   return (
     <section
       id="hero"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* === Fondo animado solo en el Hero === */}
-<div className="absolute inset-0 -z-10 pointer-events-none animate-fluxo-breathe">
-  <div
-    className="w-full h-full"
-    style={{
-      background:
-        "radial-gradient(circle at 30% 50%, rgba(255,122,0,0.2), rgba(0,144,255,0.15), #ffffff), url('/backgrounds/fluxo-bg.webp') center/cover no-repeat",
-      transform: "scale(1.03)",
-      willChange: "transform, background-position",
-    }}
-  ></div>
-</div>
+      <div
+        ref={bgRef}
+        className="absolute inset-0 -z-10 pointer-events-none transition-transform duration-700 ease-in-out"
+        style={{
+          background:
+            "radial-gradient(circle at 30% 50%, rgba(255,122,0,0.18), rgba(0,144,255,0.15), #ffffff), url('/backgrounds/fluxo-bg.webp') center/cover no-repeat",
+          transform: "scale(1.03)",
+        }}
+      ></div>
 
       {/* Decoraciones originales */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
