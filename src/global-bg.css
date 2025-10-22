@@ -1,6 +1,0 @@
-/* Desactivado para evitar fondo global */
-body {
-  background: #fff;
-  overflow-x: hidden;
-  min-height: 100vh;
-}

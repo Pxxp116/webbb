@@ -7,7 +7,7 @@ const HeroSection = () => {
   useEffect(() => {
     let t = 0;
     const animate = () => {
-      t += 0.002; // velocidad del movimiento
+      t += 0.003;
       const x = 50 + Math.sin(t) * 2.5;
       const y = 50 + Math.cos(t) * 2.5;
       if (bgRef.current) {
@@ -20,11 +20,8 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
-    >
-      {/* === Fondo animado SOLO en el Hero === */}
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* === Fondo animado SOLO aquí === */}
       <div
         ref={bgRef}
         className="absolute inset-0 -z-10 pointer-events-none"
@@ -32,16 +29,10 @@ const HeroSection = () => {
           background:
             "radial-gradient(circle at 30% 50%, rgba(255,122,0,0.2), rgba(0,144,255,0.15), #ffffff), url('/backgrounds/fluxo-bg.webp') center/cover no-repeat",
           transform: "scale(1.03)",
-          transition: "transform 0.2s ease-out",
+          transition: "transform 0.3s ease-in-out",
         }}
       ></div>
 
-      {/* Decoraciones originales */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      <div className="absolute top-20 right-20 w-72 h-72 bg-accent-orange/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
-
-      {/* Contenido principal */}
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="text-center lg:text-left">
@@ -63,8 +54,7 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 className="btn-primary inline-flex items-center gap-2"
               >
-                Contactar
-                <ArrowRight className="w-5 h-5" />
+                Contactar <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="https://fluxogastrobot.com/"
@@ -72,8 +62,7 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 className="btn-outline inline-flex items-center gap-2"
               >
-                Probar Demo
-                <Bot className="w-5 h-5" />
+                Probar Demo <Bot className="w-5 h-5" />
               </a>
             </div>
           </div>
