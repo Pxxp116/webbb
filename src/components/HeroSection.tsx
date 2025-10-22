@@ -7,12 +7,11 @@ const HeroSection = () => {
   useEffect(() => {
     let t = 0;
     const animate = () => {
-      t += 0.003;
-      const x = 50 + Math.sin(t) * 2.5;
-      const y = 50 + Math.cos(t) * 2.5;
+      t += 0.0025;
+      const waveX = 50 + Math.sin(t) * 5; // movimiento horizontal visible
+      const waveY = 50 + Math.cos(t * 1.2) * 4; // movimiento vertical suave
       if (bgRef.current) {
-        bgRef.current.style.backgroundPosition = `${x}% ${y}%`;
-        bgRef.current.style.transform = `scale(${1.02 + Math.sin(t) * 0.02})`;
+        bgRef.current.style.backgroundPosition = `${waveX}% ${waveY}%`;
       }
       requestAnimationFrame(animate);
     };
@@ -20,18 +19,31 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* === Fondo animado SOLO aquí === */}
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
+      {/* === Fondo animado SOLO en el Hero === */}
       <div
         ref={bgRef}
         className="absolute inset-0 -z-10 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle at 30% 50%, rgba(255,122,0,0.2), rgba(0,144,255,0.15), #ffffff), url('/backgrounds/fluxo-bg.webp') center/cover no-repeat",
-          transform: "scale(1.03)",
-          transition: "transform 0.3s ease-in-out",
+            "url('/backgrounds/fluxo-bg.webp') center/cover no-repeat",
+          transform: "scale(1.05)",
+          filter: "brightness(1.05)",
         }}
-      ></div>
+      />
+
+      {/* Capa semitransparente de color para darle efecto “olas fluyentes” */}
+      <div
+        className="absolute inset-0 -z-10 opacity-60 mix-blend-soft-light"
+        style={{
+          background:
+            "radial-gradient(circle at 30% 50%, rgba(255,122,0,0.35), rgba(0,144,255,0.35))",
+          animation: "fluxo-waves 12s ease-in-out infinite alternate",
+        }}
+      />
 
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -47,6 +59,7 @@ const HeroSection = () => {
               de optimización de tareas que ayudarán a tu negocio a trabajar de
               forma más eficiente e inteligente.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
                 href="https://wa.me/message/YC7W3UVLEHFKB1"

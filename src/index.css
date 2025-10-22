@@ -222,20 +222,21 @@ body::before {
 }
 
 /* === Animación del fondo Fluxo === */
-@keyframes fluxo-breathe {
+@keyframes fluxo-waves {
   0% {
     background-position: 48% 52%;
     transform: scale(1.02);
   }
   50% {
     background-position: 52% 48%;
-    transform: scale(1.06);
+    transform: scale(1.05);
   }
   100% {
     background-position: 50% 50%;
     transform: scale(1.02);
   }
 }
+
 
 .animate-fluxo-breathe {
   animation: fluxo-breathe 30s ease-in-out infinite alternate;
