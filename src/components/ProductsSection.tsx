@@ -6,7 +6,7 @@ const ProductsSection = () => {
     <section id="productos" className="py-24 bg-gray-50">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-gray-900 mb-12">
-          Servicios listos
+          Servicios listos para activación
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">

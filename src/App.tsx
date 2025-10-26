@@ -3,8 +3,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/HeroSection";
 import Productos from "./components/ProductsSection";
-import SplitQRSection from "./components/SplitQRSection";
-import GastroBotSection from "./components/GastroBotSection";
 import Automatizacion from "./components/AutomationSection";
 import Beneficios from "./components/BenefitsSection";
 import FAQ from "./components/FAQSection";
@@ -28,16 +26,6 @@ function App() {
           {/* 💡 Nueva sección: Microsoluciones personalizadas */}
           <section id="microsoluciones">
             <MicroSolutionsRequest />
-          </section>
-
-          {/* 🧾 Nueva sección: SplitQR */}
-          <section id="splitqr">
-            <SplitQRSection />
-          </section>
-
-          {/* 🤖 Nueva sección: GastroBot */}
-          <section id="gastrobot">
-            <GastroBotSection />
           </section>
 
           {/* 👇 Solo una vez esta sección */}
