@@ -556,7 +556,7 @@ ________________________________________
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/60 text-sm">
-            © 2025 Fluxo, Powered by PX Corporation. Todos los derechos reservados.
+            © 2025 Fluxo, Powered by Velarium. Todos los derechos reservados.
           </p>
           <div className="flex gap-6 text-sm text-primary-foreground/60">
             {/* ✅ Activados los botones */}
